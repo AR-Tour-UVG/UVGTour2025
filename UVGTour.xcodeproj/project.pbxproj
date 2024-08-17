@@ -12,6 +12,10 @@
 		70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB352F2C713EDC00120FA6 /* Assets.xcassets */; };
 		70BB35332C713EDC00120FA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB35322C713EDC00120FA6 /* Preview Assets.xcassets */; };
 		70BB353F2C713FC800120FA6 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB353E2C713FC800120FA6 /* Tour.swift */; };
+		70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35422C71432B00120FA6 /* SensorRepository.swift */; };
+		70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */; };
+		70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */; };
+		70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		70BB352F2C713EDC00120FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BB35322C713EDC00120FA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70BB353E2C713FC800120FA6 /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
+		70BB35422C71432B00120FA6 /* SensorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRepository.swift; sourceTree = "<group>"; };
+		70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRepositoryImpl.swift; sourceTree = "<group>"; };
+		70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOSensorDatasource.swift; sourceTree = "<group>"; };
+		70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimoteSensorDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +84,9 @@
 		70BB35392C713F6300120FA6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				70BB353E2C713FC800120FA6 /* Tour.swift */,
+				70BB354F2C7144AA00120FA6 /* UseCases */,
+				70BB35412C71431C00120FA6 /* Repositories */,
+				70BB35402C71431600120FA6 /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -84,6 +94,7 @@
 		70BB353A2C713F6A00120FA6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				70BB35442C7143E400120FA6 /* Screens */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -91,6 +102,8 @@
 		70BB353B2C713F7C00120FA6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				70BB354E2C71449400120FA6 /* Utils */,
+				70BB354D2C71448F00120FA6 /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -98,8 +111,71 @@
 		70BB353C2C713F8300120FA6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				70BB35462C7143FE00120FA6 /* Repository */,
+				70BB35452C7143EC00120FA6 /* Datasource */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		70BB35402C71431600120FA6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				70BB353E2C713FC800120FA6 /* Tour.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		70BB35412C71431C00120FA6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35422C71432B00120FA6 /* SensorRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		70BB35442C7143E400120FA6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		70BB35452C7143EC00120FA6 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */,
+				70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		70BB35462C7143FE00120FA6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		70BB354D2C71448F00120FA6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70BB354E2C71449400120FA6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		70BB354F2C7144AA00120FA6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,8 +249,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BB353F2C713FC800120FA6 /* Tour.swift in Sources */,
+				70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */,
+				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
+				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
+				70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

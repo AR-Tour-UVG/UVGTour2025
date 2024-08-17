@@ -8,7 +8,9 @@
 import Foundation
 
 
-/// A data representation of a tour. This tour can be followed and completed.
+/// A data representation of a tour.
+///
+/// A user can complete a Tour by following the stops.
 struct Tour: Identifiable {
     var id: ObjectIdentifier
     let name: String
