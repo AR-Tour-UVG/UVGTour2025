@@ -11,6 +11,7 @@
 		70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB352D2C713EDB00120FA6 /* ContentView.swift */; };
 		70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB352F2C713EDC00120FA6 /* Assets.xcassets */; };
 		70BB35332C713EDC00120FA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB35322C713EDC00120FA6 /* Preview Assets.xcassets */; };
+		70BB353F2C713FC800120FA6 /* Tour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB353E2C713FC800120FA6 /* Tour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		70BB352D2C713EDB00120FA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70BB352F2C713EDC00120FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BB35322C713EDC00120FA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70BB353E2C713FC800120FA6 /* Tour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,10 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
+				70BB353A2C713F6A00120FA6 /* Presentation */,
+				70BB353C2C713F8300120FA6 /* Data */,
+				70BB35392C713F6300120FA6 /* Domain */,
+				70BB353B2C713F7C00120FA6 /* Core */,
 				70BB352B2C713EDB00120FA6 /* UVGTourApp.swift */,
 				70BB352D2C713EDB00120FA6 /* ContentView.swift */,
 				70BB352F2C713EDC00120FA6 /* Assets.xcassets */,
@@ -65,6 +71,35 @@
 				70BB35322C713EDC00120FA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70BB35392C713F6300120FA6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				70BB353E2C713FC800120FA6 /* Tour.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		70BB353A2C713F6A00120FA6 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		70BB353B2C713F7C00120FA6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		70BB353C2C713F8300120FA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BB353F2C713FC800120FA6 /* Tour.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 			);
@@ -280,6 +316,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +346,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
