@@ -14,5 +14,5 @@ import Foundation
 /// The ``distance`` is calculated in meters from the user's phone.
 struct Sensor: Identifiable, Equatable {
     var id: String
-    var distance: Int
+    var distance: Float
 }

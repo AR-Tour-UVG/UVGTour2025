@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct TestSensorScreen: View {
+    @StateObject var viewModel: TestSensorViewModel
     var body: some View {
         VStack {
-            VStack {
-                Text("123-3132-312")
-                Text("2 meters")
+            ForEach(viewModel.sensors) { sensor in
+                VStack {
+                    Text(sensor.id)
+                    Text("\(sensor.distance) meters")
+                }
             }
+            
         }
     }
 }
 
 #Preview {
-    TestSensorScreen()
+    TestSensorScreen(viewModel: TestSensorViewModel(watchSensorsUseCase: WatchSensorsUseCase(sensorsRepository: SensorRepositoryImpl(datasource: SocketIOSensorDatasource()))))
 }

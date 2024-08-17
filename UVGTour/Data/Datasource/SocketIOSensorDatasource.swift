@@ -14,7 +14,7 @@ struct SocketIOSensorDatasource: SensorRepository {
         Timer.publish(every: 1.0, on: .main, in: .common)
             .autoconnect()
             .map { _ in
-                [Sensor(id: "123", distance: 10)]
+                [Sensor(id: "123", distance: Float.random(in: 0...5)), Sensor(id: "1234", distance: Float.random(in: 0...5))]
             }
             .eraseToAnyPublisher()
     }
