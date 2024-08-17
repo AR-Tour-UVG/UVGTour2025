@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct UVGTourApp: App {
+
     var body: some Scene {
+        let datasource = SocketIOSensorDatasource()
+        let repository = SensorRepositoryImpl(datasource: datasource)
+        let useCase = WatchSensorsUseCase(sensorsRepository: repository)
+        let viewModel = TestSensorViewModel(watchSensorsUseCase: useCase)
         WindowGroup {
-            ContentView()
+            TestSensorScreen(viewModel: viewModel)
         }
     }
 }

@@ -23,6 +23,7 @@
 		70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35602C71510E00120FA6 /* UVGTourTests.swift */; };
 		70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */; };
 		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
+		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		70BB35602C71510E00120FA6 /* UVGTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVGTourTests.swift; sourceTree = "<group>"; };
 		70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCaseTests.swift; sourceTree = "<group>"; };
 		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
+		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				70BB352A2C713EDB00120FA6 /* UVGTour */,
 				70BB355F2C71510E00120FA6 /* UVGTourTests */,
 				70BB35292C713EDB00120FA6 /* Products */,
+				70BB35712C715BA700120FA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +148,7 @@
 		70BB353C2C713F8300120FA6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				70EFA5ED2C7163F400A45190 /* Models */,
 				70BB35462C7143FE00120FA6 /* Repository */,
 				70BB35452C7143EC00120FA6 /* Datasource */,
 			);
@@ -266,6 +270,21 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		70BB35712C715BA700120FA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70EFA5ED2C7163F400A45190 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,6 +301,8 @@
 			dependencies = (
 			);
 			name = UVGTour;
+			packageProductDependencies = (
+			);
 			productName = UVGTour;
 			productReference = 70BB35282C713EDB00120FA6 /* UVGTour.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +321,8 @@
 				70BB35632C71510E00120FA6 /* PBXTargetDependency */,
 			);
 			name = UVGTourTests;
+			packageProductDependencies = (
+			);
 			productName = UVGTourTests;
 			productReference = 70BB355E2C71510E00120FA6 /* UVGTourTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -332,6 +355,9 @@
 				Base,
 			);
 			mainGroup = 70BB351F2C713EDB00120FA6;
+			packageReferences = (
+				70BB35702C715B4400120FA6 /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 70BB35292C713EDB00120FA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BB353F2C713FC800120FA6 /* Tour.swift in Sources */,
+				70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */,
 				70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */,
 				70BB35592C71488600120FA6 /* Sensor.swift in Sources */,
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
@@ -647,6 +674,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70BB35702C715B4400120FA6 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 70BB35202C713EDB00120FA6 /* Project object */;
 }
