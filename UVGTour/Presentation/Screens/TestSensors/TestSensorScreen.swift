@@ -23,5 +23,9 @@ struct TestSensorScreen: View {
 }
 
 #Preview {
-    TestSensorScreen(viewModel: TestSensorViewModel(watchSensorsUseCase: WatchSensorsUseCase(sensorsRepository: SensorRepositoryImpl(datasource: SocketIOSensorDatasource()))))
+    let datasource = SocketIOSensorDatasource()
+    let repository = SensorRepositoryImpl(datasource: datasource)
+    let useCase = WatchSensorsUseCase(sensorsRepository: repository)
+    let viewModel = TestSensorViewModel(watchSensorsUseCase: useCase)
+    return TestSensorScreen(viewModel: viewModel)
 }
