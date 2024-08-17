@@ -6,8 +6,18 @@
 //
 
 import Foundation
+import Combine
 
 /// Datasource that integrates SocketIO for sensor simulation.
 struct SocketIOSensorDatasource: SensorRepository {
+    var sensorsPublisher: AnyPublisher<[Sensor], Never> {
+        Timer.publish(every: 1.0, on: .main, in: .common)
+            .autoconnect()
+            .map { _ in
+                [Sensor(id: "123", distance: 10)]
+            }
+            .eraseToAnyPublisher()
+    }
+    
     
 }

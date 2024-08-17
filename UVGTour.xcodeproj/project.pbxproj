@@ -16,7 +16,24 @@
 		70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */; };
 		70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */; };
 		70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */; };
+		70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35522C7146C000120FA6 /* TestSensorScreen.swift */; };
+		70BB35552C7147A500120FA6 /* TestSensorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35542C7147A500120FA6 /* TestSensorViewModel.swift */; };
+		70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35562C71482C00120FA6 /* WatchSensorsUseCase.swift */; };
+		70BB35592C71488600120FA6 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35582C71488600120FA6 /* Sensor.swift */; };
+		70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35602C71510E00120FA6 /* UVGTourTests.swift */; };
+		70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */; };
+		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70BB35622C71510E00120FA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70BB35202C713EDB00120FA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70BB35272C713EDB00120FA6;
+			remoteInfo = UVGTour;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		70BB35282C713EDB00120FA6 /* UVGTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVGTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,10 +46,25 @@
 		70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorRepositoryImpl.swift; sourceTree = "<group>"; };
 		70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOSensorDatasource.swift; sourceTree = "<group>"; };
 		70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimoteSensorDatasource.swift; sourceTree = "<group>"; };
+		70BB35522C7146C000120FA6 /* TestSensorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSensorScreen.swift; sourceTree = "<group>"; };
+		70BB35542C7147A500120FA6 /* TestSensorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSensorViewModel.swift; sourceTree = "<group>"; };
+		70BB35562C71482C00120FA6 /* WatchSensorsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCase.swift; sourceTree = "<group>"; };
+		70BB35582C71488600120FA6 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		70BB355E2C71510E00120FA6 /* UVGTourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UVGTourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BB35602C71510E00120FA6 /* UVGTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVGTourTests.swift; sourceTree = "<group>"; };
+		70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCaseTests.swift; sourceTree = "<group>"; };
+		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		70BB35252C713EDB00120FA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BB355B2C71510E00120FA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				70BB352A2C713EDB00120FA6 /* UVGTour */,
+				70BB355F2C71510E00120FA6 /* UVGTourTests */,
 				70BB35292C713EDB00120FA6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				70BB35282C713EDB00120FA6 /* UVGTour.app */,
+				70BB355E2C71510E00120FA6 /* UVGTourTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				70BB353E2C713FC800120FA6 /* Tour.swift */,
+				70BB35582C71488600120FA6 /* Sensor.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -136,6 +171,7 @@
 		70BB35442C7143E400120FA6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				70BB35512C7146B100120FA6 /* TestSensors */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -174,8 +210,60 @@
 		70BB354F2C7144AA00120FA6 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				70BB35562C71482C00120FA6 /* WatchSensorsUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		70BB35512C7146B100120FA6 /* TestSensors */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35522C7146C000120FA6 /* TestSensorScreen.swift */,
+				70BB35542C7147A500120FA6 /* TestSensorViewModel.swift */,
+			);
+			path = TestSensors;
+			sourceTree = "<group>";
+		};
+		70BB355F2C71510E00120FA6 /* UVGTourTests */ = {
+			isa = PBXGroup;
+			children = (
+				70BB356C2C71520D00120FA6 /* Test Utils */,
+				70BB35672C71511200120FA6 /* Domain */,
+				70BB35602C71510E00120FA6 /* UVGTourTests.swift */,
+			);
+			path = UVGTourTests;
+			sourceTree = "<group>";
+		};
+		70BB35672C71511200120FA6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35682C71511900120FA6 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		70BB35682C71511900120FA6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		70BB356C2C71520D00120FA6 /* Test Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70BB356D2C71521400120FA6 /* Mocks */,
+			);
+			path = "Test Utils";
+			sourceTree = "<group>";
+		};
+		70BB356D2C71521400120FA6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +286,24 @@
 			productReference = 70BB35282C713EDB00120FA6 /* UVGTour.app */;
 			productType = "com.apple.product-type.application";
 		};
+		70BB355D2C71510E00120FA6 /* UVGTourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70BB35642C71510E00120FA6 /* Build configuration list for PBXNativeTarget "UVGTourTests" */;
+			buildPhases = (
+				70BB355A2C71510E00120FA6 /* Sources */,
+				70BB355B2C71510E00120FA6 /* Frameworks */,
+				70BB355C2C71510E00120FA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70BB35632C71510E00120FA6 /* PBXTargetDependency */,
+			);
+			name = UVGTourTests;
+			productName = UVGTourTests;
+			productReference = 70BB355E2C71510E00120FA6 /* UVGTourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +316,10 @@
 				TargetAttributes = {
 					70BB35272C713EDB00120FA6 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					70BB355D2C71510E00120FA6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 70BB35272C713EDB00120FA6;
 					};
 				};
 			};
@@ -227,6 +337,7 @@
 			projectRoot = "";
 			targets = (
 				70BB35272C713EDB00120FA6 /* UVGTour */,
+				70BB355D2C71510E00120FA6 /* UVGTourTests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,6 +352,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		70BB355C2C71510E00120FA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -250,15 +368,37 @@
 			files = (
 				70BB353F2C713FC800120FA6 /* Tour.swift in Sources */,
 				70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */,
+				70BB35592C71488600120FA6 /* Sensor.swift in Sources */,
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
+				70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
+				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
 				70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */,
+				70BB35552C7147A500120FA6 /* TestSensorViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70BB355A2C71510E00120FA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */,
+				70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */,
+				70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70BB35632C71510E00120FA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70BB35272C713EDB00120FA6 /* UVGTour */;
+			targetProxy = 70BB35622C71510E00120FA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		70BB35342C713EDC00120FA6 /* Debug */ = {
@@ -440,6 +580,42 @@
 			};
 			name = Release;
 		};
+		70BB35652C71510E00120FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YQ258U397;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.UVGTourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UVGTour.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UVGTour";
+			};
+			name = Debug;
+		};
+		70BB35662C71510E00120FA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YQ258U397;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.UVGTourTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UVGTour.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/UVGTour";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +633,15 @@
 			buildConfigurations = (
 				70BB35372C713EDC00120FA6 /* Debug */,
 				70BB35382C713EDC00120FA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70BB35642C71510E00120FA6 /* Build configuration list for PBXNativeTarget "UVGTourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70BB35652C71510E00120FA6 /* Debug */,
+				70BB35662C71510E00120FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
