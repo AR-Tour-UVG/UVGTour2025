@@ -32,6 +32,8 @@
 		70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6002C72A2F800A45190 /* ToursRepositoryImpl.swift */; };
 		70EFA6032C72A39B00A45190 /* ListToursUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6022C72A39B00A45190 /* ListToursUseCase.swift */; };
 		70EFA6092C72A46900A45190 /* ListToursUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */; };
+		70EFA60B2C72A91500A45190 /* ToursListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA60A2C72A91500A45190 /* ToursListViewModel.swift */; };
+		70EFA6102C72AB8F00A45190 /* ToursListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA60F2C72AB8F00A45190 /* ToursListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		70EFA6002C72A2F800A45190 /* ToursRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursRepositoryImpl.swift; sourceTree = "<group>"; };
 		70EFA6022C72A39B00A45190 /* ListToursUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToursUseCase.swift; sourceTree = "<group>"; };
 		70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToursUseCaseTests.swift; sourceTree = "<group>"; };
+		70EFA60A2C72A91500A45190 /* ToursListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListViewModel.swift; sourceTree = "<group>"; };
+		70EFA60F2C72AB8F00A45190 /* ToursListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,8 +257,9 @@
 		70BB355F2C71510E00120FA6 /* UVGTourTests */ = {
 			isa = PBXGroup;
 			children = (
-				70BB356C2C71520D00120FA6 /* Test Utils */,
+				70EFA60C2C72AB6A00A45190 /* Presentation */,
 				70BB35672C71511200120FA6 /* Domain */,
+				70BB356C2C71520D00120FA6 /* Test Utils */,
 				70BB35602C71510E00120FA6 /* UVGTourTests.swift */,
 			);
 			path = UVGTourTests;
@@ -312,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */,
+				70EFA60A2C72A91500A45190 /* ToursListViewModel.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -361,6 +367,30 @@
 			isa = PBXGroup;
 			children = (
 				70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		70EFA60C2C72AB6A00A45190 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA60D2C72AB7600A45190 /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		70EFA60D2C72AB7600A45190 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA60E2C72AB7B00A45190 /* Tours */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		70EFA60E2C72AB7B00A45190 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA60F2C72AB8F00A45190 /* ToursListViewModelTests.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -484,6 +514,7 @@
 				70EFA5FF2C72A28100A45190 /* LocalToursDatasource.swift in Sources */,
 				70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */,
 				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
+				70EFA60B2C72A91500A45190 /* ToursListViewModel.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
 				70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */,
@@ -502,6 +533,7 @@
 				70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */,
 				70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */,
 				70EFA6092C72A46900A45190 /* ListToursUseCaseTests.swift in Sources */,
+				70EFA6102C72AB8F00A45190 /* ToursListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
