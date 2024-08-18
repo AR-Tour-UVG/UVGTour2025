@@ -24,6 +24,7 @@
 		70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */; };
 		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
 		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
+		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCaseTests.swift; sourceTree = "<group>"; };
 		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
 		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
+		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				70BB354E2C71449400120FA6 /* Utils */,
 				70BB354D2C71448F00120FA6 /* Extensions */,
+				70EFA5F32C729F9E00A45190 /* Errors.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
 				70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
+				70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */,
 				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,

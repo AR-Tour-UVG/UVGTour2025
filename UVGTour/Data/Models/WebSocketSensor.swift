@@ -22,7 +22,4 @@ struct WebSocketSensor {
     }
 }
 
-enum WebSocketSensorError: Error {
-    case missingData
-    case invalidData
-}
+
