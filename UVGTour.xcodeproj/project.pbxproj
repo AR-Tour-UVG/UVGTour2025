@@ -25,6 +25,8 @@
 		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
 		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
 		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
+		70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */; };
+		70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F82C72A0CF00A45190 /* String+Hardcoded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
 		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
 		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListScreen.swift; sourceTree = "<group>"; };
+		70EFA5F82C72A0CF00A45190 /* String+Hardcoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hardcoded.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 		70BB35442C7143E400120FA6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				70EFA5F52C72A09700A45190 /* Tours */,
 				70BB35512C7146B100120FA6 /* TestSensors */,
 			);
 			path = Screens;
@@ -203,6 +208,7 @@
 		70BB354D2C71448F00120FA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				70EFA5F82C72A0CF00A45190 /* String+Hardcoded.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +292,14 @@
 				70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		70EFA5F52C72A09700A45190 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */,
+			);
+			path = Tours;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,12 +414,14 @@
 				70BB354A2C71444500120FA6 /* SocketIOSensorDatasource.swift in Sources */,
 				70BB35592C71488600120FA6 /* Sensor.swift in Sources */,
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
+				70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */,
 				70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
 				70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */,
 				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
+				70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */,
 				70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */,
 				70BB35552C7147A500120FA6 /* TestSensorViewModel.swift in Sources */,
 			);

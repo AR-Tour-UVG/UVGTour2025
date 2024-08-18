@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+
+extension String {
+    /// Utility property that marks string as hardcoded
+    var hardcoded: String { self }
+}
