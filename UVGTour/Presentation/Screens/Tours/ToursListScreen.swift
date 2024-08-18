@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ToursListScreen: View {
+    @StateObject var viewModel: ToursListViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.tours) { tour in
+            VStack(alignment: .leading) {
+                Text(tour.name)
+                Text(tour.description)
+                
+            }
+        }
     }
 }
 
 #Preview {
-    NavigationView(content: {
-        ToursListScreen()
+    let datasource = LocalToursDatasource()
+    let repository = ToursRepositoryImpl(datasource: datasource)
+    let useCase = ListToursUseCase(toursRepository: repository)
+    return NavigationView(content: {
+        ToursListScreen(viewModel: ToursListViewModel(useCase: useCase))
             .navigationTitle("Tours")
     })
     
