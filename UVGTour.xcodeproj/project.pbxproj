@@ -27,6 +27,11 @@
 		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
 		70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */; };
 		70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F82C72A0CF00A45190 /* String+Hardcoded.swift */; };
+		70EFA5FB2C72A1CB00A45190 /* ToursRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5FA2C72A1CB00A45190 /* ToursRepository.swift */; };
+		70EFA5FF2C72A28100A45190 /* LocalToursDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5FE2C72A28100A45190 /* LocalToursDatasource.swift */; };
+		70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6002C72A2F800A45190 /* ToursRepositoryImpl.swift */; };
+		70EFA6032C72A39B00A45190 /* ListToursUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6022C72A39B00A45190 /* ListToursUseCase.swift */; };
+		70EFA6092C72A46900A45190 /* ListToursUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +67,11 @@
 		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListScreen.swift; sourceTree = "<group>"; };
 		70EFA5F82C72A0CF00A45190 /* String+Hardcoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hardcoded.swift"; sourceTree = "<group>"; };
+		70EFA5FA2C72A1CB00A45190 /* ToursRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursRepository.swift; sourceTree = "<group>"; };
+		70EFA5FE2C72A28100A45190 /* LocalToursDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalToursDatasource.swift; sourceTree = "<group>"; };
+		70EFA6002C72A2F800A45190 /* ToursRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursRepositoryImpl.swift; sourceTree = "<group>"; };
+		70EFA6022C72A39B00A45190 /* ListToursUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToursUseCase.swift; sourceTree = "<group>"; };
+		70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToursUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +137,8 @@
 		70BB35392C713F6300120FA6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				70BB354F2C7144AA00120FA6 /* UseCases */,
 				70BB35412C71431C00120FA6 /* Repositories */,
+				70BB354F2C7144AA00120FA6 /* UseCases */,
 				70BB35402C71431600120FA6 /* Entities */,
 			);
 			path = Domain;
@@ -175,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				70BB35422C71432B00120FA6 /* SensorRepository.swift */,
+				70EFA5FA2C72A1CB00A45190 /* ToursRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -191,8 +202,8 @@
 		70BB35452C7143EC00120FA6 /* Datasource */ = {
 			isa = PBXGroup;
 			children = (
-				70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */,
-				70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */,
+				70EFA5FD2C72A26400A45190 /* Tours */,
+				70EFA5FC2C72A25A00A45190 /* Sensors */,
 			);
 			path = Datasource;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				70BB35472C71440E00120FA6 /* SensorRepositoryImpl.swift */,
+				70EFA6002C72A2F800A45190 /* ToursRepositoryImpl.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -223,7 +235,8 @@
 		70BB354F2C7144AA00120FA6 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				70BB35562C71482C00120FA6 /* WatchSensorsUseCase.swift */,
+				70EFA6052C72A3A700A45190 /* Sensors */,
+				70EFA6042C72A3A100A45190 /* Tours */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -258,7 +271,8 @@
 		70BB35682C71511900120FA6 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */,
+				70EFA6072C72A45200A45190 /* Tours */,
+				70EFA6062C72A44C00A45190 /* Sensors */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -298,6 +312,55 @@
 			isa = PBXGroup;
 			children = (
 				70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		70EFA5FC2C72A25A00A45190 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35492C71444500120FA6 /* SocketIOSensorDatasource.swift */,
+				70BB354B2C71445000120FA6 /* EstimoteSensorDatasource.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		70EFA5FD2C72A26400A45190 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA5FE2C72A28100A45190 /* LocalToursDatasource.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		70EFA6042C72A3A100A45190 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA6022C72A39B00A45190 /* ListToursUseCase.swift */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		70EFA6052C72A3A700A45190 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				70BB35562C71482C00120FA6 /* WatchSensorsUseCase.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		70EFA6062C72A44C00A45190 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		70EFA6072C72A45200A45190 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				70EFA6082C72A46900A45190 /* ListToursUseCaseTests.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -416,12 +479,16 @@
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
 				70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */,
 				70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */,
+				70EFA6032C72A39B00A45190 /* ListToursUseCase.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
+				70EFA5FF2C72A28100A45190 /* LocalToursDatasource.swift in Sources */,
 				70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */,
 				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
+				70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */,
 				70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */,
+				70EFA5FB2C72A1CB00A45190 /* ToursRepository.swift in Sources */,
 				70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */,
 				70BB35552C7147A500120FA6 /* TestSensorViewModel.swift in Sources */,
 			);
@@ -434,6 +501,7 @@
 				70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */,
 				70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */,
 				70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */,
+				70EFA6092C72A46900A45190 /* ListToursUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

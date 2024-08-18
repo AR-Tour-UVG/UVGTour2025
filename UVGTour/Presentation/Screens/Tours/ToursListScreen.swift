@@ -14,5 +14,9 @@ struct ToursListScreen: View {
 }
 
 #Preview {
-    ToursListScreen()
+    NavigationView(content: {
+        ToursListScreen()
+            .navigationTitle("Tours")
+    })
+    
 }
