@@ -30,5 +30,12 @@ class ToursListViewModel: ObservableObject {
             self.tours = fetchedTours
         }
     }
+    
+    // MARK: Public Functions
+    
+    public func select(tour: Tour) {
+        // Selects a tour from the list
+        
+    }
 
 }

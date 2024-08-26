@@ -7,12 +7,44 @@
 
 import SwiftUI
 
+/// Displays the tour progress and opens the stop detail view.
 struct TourProgressView: View {
+    @EnvironmentObject var tourViewModel: TourViewModel
+    var tour: Tour { tourViewModel.tour }
+    var nextStop: Stop { tour.nextStop }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            Text(nextStop.emoji)
+                .font(.title)
+                .padding(Sizes.p20)
+                .background(.black)
+                .clipShape(Circle())
+                .offset(y: Sizes.p24)
+                .zIndex(1)
+            VStack {
+                Text(tour.nextStop.name).font(.title3).bold()
+                Button("Siguiente") {
+                    tourViewModel.nextStop()
+                }
+            }
+            .padding(.vertical, Sizes.p20)
+            .padding(.top, Sizes.p20) // Give space to the emoji
+            .frame(maxWidth: .infinity)
+            .background()
+            .cornerRadius(25.0)
+            
+        }
     }
 }
 
 #Preview {
-    TourProgressView()
+    let tour = LocalToursDatasource.tours[0]
+    let tourViewModel = TourViewModel(tour: tour)
+    return ZStack(alignment: .bottom) {
+        Color.gray.ignoresSafeArea()
+        TourProgressView()
+            .environmentObject(tourViewModel)
+        
+    }
+    
 }

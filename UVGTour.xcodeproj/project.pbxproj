@@ -23,6 +23,12 @@
 		70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB35602C71510E00120FA6 /* UVGTourTests.swift */; };
 		70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */; };
 		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
+		70BDDC1F2C7A4DD500C4E735 /* TourSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC1E2C7A4DD500C4E735 /* TourSelection.swift */; };
+		70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC202C7A523B00C4E735 /* TourScreen.swift */; };
+		70BDDC242C7A541200C4E735 /* TourStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC232C7A541200C4E735 /* TourStopView.swift */; };
+		70BDDC262C7A568C00C4E735 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC252C7A568C00C4E735 /* Sizes.swift */; };
+		70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC272C7A570900C4E735 /* TourProgressView.swift */; };
+		70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC292C7A586300C4E735 /* TourViewModel.swift */; };
 		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
 		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
 		70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */; };
@@ -65,6 +71,12 @@
 		70BB35602C71510E00120FA6 /* UVGTourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVGTourTests.swift; sourceTree = "<group>"; };
 		70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCaseTests.swift; sourceTree = "<group>"; };
 		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
+		70BDDC1E2C7A4DD500C4E735 /* TourSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourSelection.swift; sourceTree = "<group>"; };
+		70BDDC202C7A523B00C4E735 /* TourScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourScreen.swift; sourceTree = "<group>"; };
+		70BDDC232C7A541200C4E735 /* TourStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStopView.swift; sourceTree = "<group>"; };
+		70BDDC252C7A568C00C4E735 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		70BDDC272C7A570900C4E735 /* TourProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressView.swift; sourceTree = "<group>"; };
+		70BDDC292C7A586300C4E735 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
 		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListScreen.swift; sourceTree = "<group>"; };
@@ -118,6 +130,7 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
+				70BDDC1C2C7A4DC100C4E735 /* Application */,
 				70BB353A2C713F6A00120FA6 /* Presentation */,
 				70BB353C2C713F8300120FA6 /* Data */,
 				70BB35392C713F6300120FA6 /* Domain */,
@@ -151,6 +164,7 @@
 		70BB353A2C713F6A00120FA6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				70BDDC222C7A540800C4E735 /* Views */,
 				70BB35442C7143E400120FA6 /* Screens */,
 			);
 			path = Presentation;
@@ -232,6 +246,7 @@
 		70BB354E2C71449400120FA6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				70BDDC252C7A568C00C4E735 /* Sizes.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -305,6 +320,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		70BDDC1C2C7A4DC100C4E735 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				70BDDC1D2C7A4DC600C4E735 /* AppState */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		70BDDC1D2C7A4DC600C4E735 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				70BDDC1E2C7A4DD500C4E735 /* TourSelection.swift */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		70BDDC222C7A540800C4E735 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70BDDC232C7A541200C4E735 /* TourStopView.swift */,
+				70BDDC272C7A570900C4E735 /* TourProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		70EFA5ED2C7163F400A45190 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +358,8 @@
 			children = (
 				70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */,
 				70EFA60A2C72A91500A45190 /* ToursListViewModel.swift */,
+				70BDDC202C7A523B00C4E735 /* TourScreen.swift */,
+				70BDDC292C7A586300C4E735 /* TourViewModel.swift */,
 			);
 			path = Tours;
 			sourceTree = "<group>";
@@ -514,11 +556,17 @@
 				70EFA5FF2C72A28100A45190 /* LocalToursDatasource.swift in Sources */,
 				70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */,
 				70BB35572C71482C00120FA6 /* WatchSensorsUseCase.swift in Sources */,
+				70BDDC262C7A568C00C4E735 /* Sizes.swift in Sources */,
+				70BDDC1F2C7A4DD500C4E735 /* TourSelection.swift in Sources */,
 				70EFA60B2C72A91500A45190 /* ToursListViewModel.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
 				70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */,
+				70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */,
+				70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */,
 				70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */,
+				70BDDC242C7A541200C4E735 /* TourStopView.swift in Sources */,
+				70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */,
 				70EFA5FB2C72A1CB00A45190 /* ToursRepository.swift in Sources */,
 				70BB35432C71432B00120FA6 /* SensorRepository.swift in Sources */,
 				70BB35552C7147A500120FA6 /* TestSensorViewModel.swift in Sources */,

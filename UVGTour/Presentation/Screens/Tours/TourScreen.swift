@@ -7,12 +7,32 @@
 
 import SwiftUI
 
+/// Screen for allowing the progression of a ``[[Tour]]``
 struct TourScreen: View {
+
+    @StateObject var tourViewModel: TourViewModel
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.gray.ignoresSafeArea()
+            Text("AR arrow here")
+            VStack {
+                Spacer()
+                TourProgressView()
+                    .environmentObject(tourViewModel)
+            }
+        }
+        
+        
     }
 }
 
 #Preview {
-    TourScreen()
+    let tour = LocalToursDatasource.tours[0]
+    let tourViewModel = TourViewModel(tour: tour)
+        
+    return NavigationView(content: {
+        TourScreen( tourViewModel: tourViewModel)
+    })
+    
 }
