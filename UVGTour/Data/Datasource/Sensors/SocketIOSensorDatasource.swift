@@ -28,7 +28,7 @@ class SocketIOSensorDatasource: SensorRepository {
             .receive(on: RunLoop.main)  // Ensure values are received on the main thread
             .eraseToAnyPublisher()
     }
-
+    
     
     
     // MARK: Socket
@@ -67,26 +67,24 @@ class SocketIOSensorDatasource: SensorRepository {
     
     /// Handles a message
     func handleMessage(_ text: String) {
-            // Handle your JSON message here
-            if let data = text.data(using: .utf8) {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    if let dictionary = json as? [String: Any], let type = dictionary["type"] as? String, type == "sensors-update" {
-                        // Handle the sensor update
-                        let sensorsRawData = dictionary["data"] as? Array<[String:Any]>
-                        print(sensorsRawData?[0] ?? "")
-                        let webSocketSensors = sensorsRawData?.compactMap({ sensorData in
-                            try? WebSocketSensor.fromJson(sensorData)
-                        }) ?? []
-                        sensorsSubject.send(webSocketSensors.map({ webSocketSensor in
-                            Sensor(id: webSocketSensor.id, distance: webSocketSensor.signalStrength)
-                        }))
-                    }
-                } catch {
-                    print("Error parsing JSON: \(error)")
+        // Handle your JSON message here
+        if let data = text.data(using: .utf8) {
+            do {
+                let json = try JSONSerialization.jsonObject(with: data, options: [])
+                if let dictionary = json as? [String: Any], let type = dictionary["type"] as? String, type == "sensors-update" {
+                    // Handle the sensor update
+                    let sensorsRawData = dictionary["data"] as? Array<[String:Any]>
+                    let webSocketSensors = sensorsRawData?.compactMap({ sensorData in
+                        try? WebSocketSensor.fromJson(sensorData)
+                    }) ?? []
+                    sensorsSubject.send(webSocketSensors.map({ webSocketSensor in
+                        Sensor(id: webSocketSensor.id, distance: webSocketSensor.signalStrength)
+                    }))
                 }
+            } catch {
+                print("Error parsing JSON: \(error)")
             }
         }
-    
+    }
     
 }

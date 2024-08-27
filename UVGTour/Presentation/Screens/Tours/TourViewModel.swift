@@ -11,13 +11,37 @@ import Combine
 class TourViewModel: ObservableObject {
     // MARK: State
     @Published private(set) var tour: Tour
+    @Published private(set) var sensors: [Sensor] = []
+    var distanceToStopSensor: Int? {
+        let nextStop = tour.nextStop
+        let sensor = sensors.first { sensor in
+            sensor.id == nextStop.sensorId
+        }
+        guard let sensor else { return nil }
+        return Int(sensor.distance)
+    }
+    var sensorsRepository: SensorRepository
+    var watchSensorsUseCase: WatchSensorsUseCase
     
     
-    init(tour: Tour) {
+    init(tour: Tour, sensorsRepository: SensorRepository) {
         self.tour = tour
+        self.sensorsRepository = sensorsRepository
+        self.watchSensorsUseCase = WatchSensorsUseCase(sensorsRepository: sensorsRepository)
+        listenToSensors()
     }
     
     
+    /// Listen to sensor updates
+    func listenToSensors() {
+        print("Listening to sensors...")
+        self.watchSensorsUseCase.watchSensors { sensors in
+            self.sensors = sensors
+        }
+    }
+    
+    
+    /// Goes to the next stop.
     func nextStop() {
         self.tour.completeStop()
     }

@@ -15,8 +15,9 @@ struct UVGTourApp: App {
         let repository = ToursRepositoryImpl(datasource: datasource)
         let useCase = ListToursUseCase(toursRepository: repository)
         let viewModel = ToursListViewModel(useCase: useCase)
+        let tourSelection = TourSelection()
         WindowGroup {
-            ToursListScreen(viewModel: viewModel)
+            TourScreen(tourViewModel: TourViewModel(tour: LocalToursDatasource.tours[0], sensorsRepository: SensorRepositoryImpl(datasource: SocketIOSensorDatasource())))
         }
     }
 }

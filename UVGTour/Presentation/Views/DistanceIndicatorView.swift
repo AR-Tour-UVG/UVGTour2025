@@ -9,12 +9,20 @@ import SwiftUI
 
 struct DistanceIndicatorView: View {
     let distance: Int
+    let arriveThreshold = 3
+    var indicatorText: String {
+        if arrived {
+            return "Llegaste".hardcoded
+        }
+        return "\(distance) \(distance > 1 ? "metros" : "metro")".hardcoded
+    }
+    var arrived: Bool { distance <= arriveThreshold }
     var body: some View {
-        Text("\(distance) \(distance > 1 ? "metros" : "metro")".hardcoded)
+        Text(indicatorText)
             .font(.caption2)
             .padding(.vertical, Sizes.p8)
             .frame(width: 100)
-            .background(.white)
+            .background(arrived  ? .green : .white)
             .cornerRadius(Sizes.p12)
     }
 }
@@ -22,7 +30,10 @@ struct DistanceIndicatorView: View {
 #Preview {
     ZStack {
         Color.black.ignoresSafeArea()
-        DistanceIndicatorView(distance: 1)
+        VStack {
+            DistanceIndicatorView(distance: 5)
+            DistanceIndicatorView(distance: 3)
+        }
     }
     
 }

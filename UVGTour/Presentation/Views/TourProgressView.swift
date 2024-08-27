@@ -39,7 +39,8 @@ struct TourProgressView: View {
 
 #Preview {
     let tour = LocalToursDatasource.tours[0]
-    let tourViewModel = TourViewModel(tour: tour)
+    let sensorsRepository = SensorRepositoryImpl(datasource: SocketIOSensorDatasource())
+    let tourViewModel = TourViewModel(tour: tour, sensorsRepository: sensorsRepository)
     return ZStack(alignment: .bottom) {
         Color.gray.ignoresSafeArea()
         TourProgressView()

@@ -41,4 +41,5 @@ struct Stop: Identifiable, Equatable {
     let name: String
     let description: String
     let emoji: String
+    let sensorId: String
 }
