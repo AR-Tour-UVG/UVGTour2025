@@ -32,6 +32,7 @@ struct TourScreen: View {
                     .environmentObject(tourViewModel)
             }
         }
+        .sensoryFeedback(.success, trigger: tourViewModel.tour.nextStop)
     }
 }
 

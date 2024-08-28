@@ -37,6 +37,9 @@ class TourViewModel: ObservableObject {
         print("Listening to sensors...")
         self.watchSensorsUseCase.watchSensors { sensors in
             self.sensors = sensors
+            if let distanceToStopSensor = self.distanceToStopSensor, distanceToStopSensor <= 0 {
+                self.tour.visited(self.tour.nextStop)
+            }
         }
     }
     
@@ -44,5 +47,11 @@ class TourViewModel: ObservableObject {
     /// Goes to the next stop.
     func nextStop() {
         self.tour.completeStop()
+    }
+    
+    
+    /// Mark a ``[[Stop]]`` as visited
+    func visited(stop: Stop) {
+        self.tour.visited(stop)
     }
 }

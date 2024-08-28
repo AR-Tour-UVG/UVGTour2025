@@ -56,10 +56,11 @@ struct TourProgressView: View {
             HStack {
                 TourProgressIndicatorView(progress: Double(tour.progress) / Double(tour.stops.count))
                 Spacer()
-                Button("Siguiente") {
+                Button(tour.willBeCompleted ? "Terminar" : "Siguiente") {
                     tourViewModel.nextStop()
                 }
                 .buttonStyle(BorderedProminentButtonStyle())
+                .disabled(!tour.nextStop.visited || tour.completed)
             }
         }
         .padding(.horizontal, Sizes.p24)

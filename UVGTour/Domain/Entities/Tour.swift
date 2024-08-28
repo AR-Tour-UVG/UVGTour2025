@@ -18,14 +18,23 @@ struct Tour: Identifiable, Equatable {
     let duration: Duration
     private(set) var stops: [Stop]
     var currentStop: Stop? = nil
+    
     var nextStop: Stop {
         guard let currentStop else { return stops[0] }
         // Get index for the currentStop
         let index = stops.firstIndex { s in
             s.id == currentStop.id
         }
-        if index! + 1 >= stops.count { return stops[0] }    // Fall back to first stop
-        return stops[index! + 1]
+        if index! + 1 > stops.count { return stops[0] }    // Fall back to first stop
+        return stops[min(index! + 1, stops.count - 1)]
+    }
+    
+    var completed: Bool {
+        stops.filter {$0.completed}.count == stops.count
+    }
+    
+    var willBeCompleted: Bool {
+        stops.filter {$0.completed}.count == stops.count - 1
     }
     
     /// Exposes the total of stops the user has completed
@@ -34,11 +43,23 @@ struct Tour: Identifiable, Equatable {
         return completeStops.count
     }
     
+    
+    /// Marks a ``Stop`` as completed.
     mutating func completeStop() {
         currentStop = nextStop
         if let currentStop, let currentStopIndex = stops.firstIndex(of: currentStop) {
             stops[currentStopIndex].complete()
         }
+    }
+    
+    /// Marks a ``Stop`` as visited.
+    ///
+    /// A stop is visited if the user has been near it.
+    mutating func visited(_ stop: Stop) {
+        guard let index = self.stops.firstIndex(where: { s in
+            s.id == stop.id
+        }) else { return }
+        self.stops[index].visit()
     }
 }
 
@@ -54,8 +75,16 @@ struct Stop: Identifiable, Equatable {
     let emoji: String
     let sensorId: String
     private(set) var completed: Bool = false
+    private(set) var visited: Bool = false
     
+    /// Marks the stop as completed
     mutating func complete() {
         self.completed = true
+    }
+    
+    
+    /// Indicates that the user has visited the stop. Meaning that the sensors detected them at least one time in less than 1 meter from it.
+    mutating func visit() {
+        self.visited = true
     }
 }

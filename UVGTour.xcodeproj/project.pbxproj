@@ -27,6 +27,7 @@
 		70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */; };
 		70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */; };
 		70BBC1302C7FC9E200358431 /* TourContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BBC12F2C7FC9E200358431 /* TourContainer.swift */; };
+		70BBC1352C7FCE7200358431 /* TourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BBC1342C7FCE7200358431 /* TourTests.swift */; };
 		70BDDC1F2C7A4DD500C4E735 /* TourSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC1E2C7A4DD500C4E735 /* TourSelection.swift */; };
 		70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC202C7A523B00C4E735 /* TourScreen.swift */; };
 		70BDDC242C7A541200C4E735 /* TourStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC232C7A541200C4E735 /* TourStopView.swift */; };
@@ -94,6 +95,7 @@
 		70BB356A2C71513100120FA6 /* WatchSensorsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSensorsUseCaseTests.swift; sourceTree = "<group>"; };
 		70BB356E2C71523800120FA6 /* FakeSensorsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeSensorsDatasource.swift; sourceTree = "<group>"; };
 		70BBC12F2C7FC9E200358431 /* TourContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourContainer.swift; sourceTree = "<group>"; };
+		70BBC1342C7FCE7200358431 /* TourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTests.swift; sourceTree = "<group>"; };
 		70BDDC1E2C7A4DD500C4E735 /* TourSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourSelection.swift; sourceTree = "<group>"; };
 		70BDDC202C7A523B00C4E735 /* TourScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourScreen.swift; sourceTree = "<group>"; };
 		70BDDC232C7A541200C4E735 /* TourStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourStopView.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		70BB35672C71511200120FA6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				70BBC1312C7FCE4800358431 /* Entities */,
 				70BB35682C71511900120FA6 /* UseCases */,
 			);
 			path = Domain;
@@ -354,6 +357,14 @@
 				70BBC12F2C7FC9E200358431 /* TourContainer.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		70BBC1312C7FCE4800358431 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				70BBC1342C7FCE7200358431 /* TourTests.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		70BDDC1C2C7A4DC100C4E735 /* Application */ = {
@@ -622,6 +633,7 @@
 				70BB356F2C71523800120FA6 /* FakeSensorsDatasource.swift in Sources */,
 				70BB35612C71510E00120FA6 /* UVGTourTests.swift in Sources */,
 				70BB356B2C71513100120FA6 /* WatchSensorsUseCaseTests.swift in Sources */,
+				70BBC1352C7FCE7200358431 /* TourTests.swift in Sources */,
 				70EFA6092C72A46900A45190 /* ListToursUseCaseTests.swift in Sources */,
 				70EFA6102C72AB8F00A45190 /* ToursListViewModelTests.swift in Sources */,
 			);
