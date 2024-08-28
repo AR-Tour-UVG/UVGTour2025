@@ -17,20 +17,22 @@ struct TourProgressView: View {
             Text(nextStop.emoji)
                 .font(.title)
                 .padding(Sizes.p20)
-                .background(.black)
+                .background(.lightBackground)
                 .clipShape(Circle())
                 .offset(y: Sizes.p24)
                 .zIndex(1)
             VStack {
+                
                 Text(tour.nextStop.name).font(.title3).bold()
                 Button("Siguiente") {
                     tourViewModel.nextStop()
                 }
+                .buttonStyle(BorderedProminentButtonStyle())
             }
             .padding(.vertical, Sizes.p20)
             .padding(.top, Sizes.p20) // Give space to the emoji
             .frame(maxWidth: .infinity)
-            .background()
+            .background(Color.background)
             .cornerRadius(25.0)
             
         }

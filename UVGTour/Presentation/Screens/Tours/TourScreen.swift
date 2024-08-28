@@ -17,6 +17,10 @@ struct TourScreen: View {
             Color.gray.ignoresSafeArea()
             Text("AR arrow here")
             VStack(spacing: Sizes.p12) {
+                Image("uvg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 50, height: 50)
                 Spacer()
                 if let distanceToStopSensor = tourViewModel.distanceToStopSensor {
                     DistanceIndicatorView(distance: distanceToStopSensor )

@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "uvg.png",
       "idiom" : "universal"
     }
   ],
