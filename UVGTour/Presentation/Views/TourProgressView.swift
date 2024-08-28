@@ -22,19 +22,31 @@ struct TourProgressView: View {
                 .offset(y: Sizes.p24)
                 .zIndex(1)
             VStack {
-                
                 Text(tour.nextStop.name).font(.title3).bold()
-                Button("Siguiente") {
-                    tourViewModel.nextStop()
-                }
-                .buttonStyle(BorderedProminentButtonStyle())
+                tourProgressContainer
+                .padding(.horizontal, Sizes.p24)
+                
+                
             }
             .padding(.vertical, Sizes.p20)
             .padding(.top, Sizes.p20) // Give space to the emoji
             .frame(maxWidth: .infinity)
             .background(Color.background)
             .cornerRadius(25.0)
-            
+        }
+    }
+    
+    var tourProgressContainer: some View {
+        VStack(alignment: .leading) {
+            Text("\(tour.progress) de \(tour.stops.count) puntos")
+            HStack {
+                TourProgressIndicatorView(progress: Double(tour.progress) / Double(tour.stops.count))
+                Spacer()
+                Button("Siguiente") {
+                    tourViewModel.nextStop()
+                }
+                .buttonStyle(BorderedProminentButtonStyle())
+            }
         }
     }
 }

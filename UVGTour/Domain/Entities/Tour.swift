@@ -16,18 +16,29 @@ struct Tour: Identifiable, Equatable {
     let name: String
     let description: String
     let duration: Duration
-    let stops: [Stop]
+    private(set) var stops: [Stop]
     var currentStop: Stop? = nil
     var nextStop: Stop {
         guard let currentStop else { return stops[0] }
         // Get index for the currentStop
-        let index = stops.firstIndex(of: currentStop)
+        let index = stops.firstIndex { s in
+            s.id == currentStop.id
+        }
         if index! + 1 >= stops.count { return stops[0] }    // Fall back to first stop
         return stops[index! + 1]
     }
     
+    /// Exposes the total of stops the user has completed
+    var progress: Int {
+        let completeStops = stops.filter { $0.completed }
+        return completeStops.count
+    }
+    
     mutating func completeStop() {
         currentStop = nextStop
+        if let currentStop, let currentStopIndex = stops.firstIndex(of: currentStop) {
+            stops[currentStopIndex].complete()
+        }
     }
 }
 
@@ -42,4 +53,9 @@ struct Stop: Identifiable, Equatable {
     let description: String
     let emoji: String
     let sensorId: String
+    private(set) var completed: Bool = false
+    
+    mutating func complete() {
+        self.completed = true
+    }
 }

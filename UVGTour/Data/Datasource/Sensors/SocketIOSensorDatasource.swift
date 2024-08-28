@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import SocketIO
 
 
 /// Datasource that integrates SocketIO for sensor simulation.

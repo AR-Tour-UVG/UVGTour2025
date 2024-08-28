@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */; };
+		7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; };
+		7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB352B2C713EDB00120FA6 /* UVGTourApp.swift */; };
 		70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB352D2C713EDB00120FA6 /* ContentView.swift */; };
 		70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB352F2C713EDC00120FA6 /* Assets.xcassets */; };
@@ -53,7 +56,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7060048F2C7ECB82003AA384 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressIndicatorView.swift; sourceTree = "<group>"; };
+		706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EstimoteUWB.xcframework; path = "../../../Downloads/iOS-Estimote-UWB-SDK-master/EstimoteUWB.xcframework"; sourceTree = "<group>"; };
+		706004902C7ECD72003AA384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		70BB35282C713EDB00120FA6 /* UVGTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVGTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BB352B2C713EDB00120FA6 /* UVGTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVGTourApp.swift; sourceTree = "<group>"; };
 		70BB352D2C713EDB00120FA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +153,7 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
+				706004902C7ECD72003AA384 /* Info.plist */,
 				70BDDC1C2C7A4DC100C4E735 /* Application */,
 				70BB353A2C713F6A00120FA6 /* Presentation */,
 				70BB353C2C713F8300120FA6 /* Data */,
@@ -318,6 +340,7 @@
 		70BB35712C715BA700120FA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -344,6 +367,7 @@
 				70BDDC232C7A541200C4E735 /* TourStopView.swift */,
 				70BDDC272C7A570900C4E735 /* TourProgressView.swift */,
 				70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */,
+				706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -450,6 +474,7 @@
 				70BB35242C713EDB00120FA6 /* Sources */,
 				70BB35252C713EDB00120FA6 /* Frameworks */,
 				70BB35262C713EDB00120FA6 /* Resources */,
+				7060048F2C7ECB82003AA384 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -568,6 +593,7 @@
 				70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */,
 				70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */,
 				70DC53322C7D432100F6A45A /* DistanceIndicatorView.swift in Sources */,
+				706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */,
 				70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */,
 				70BDDC242C7A541200C4E735 /* TourStopView.swift in Sources */,
 				70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */,
@@ -730,12 +756,17 @@
 				DEVELOPMENT_TEAM = 8YQ258U397;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UVGTour/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is utlizied for arkit to give user horizontal and vertical info";
+				INFOPLIST_KEY_NSNearbyInteractionAllowOnceUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
+				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,12 +791,17 @@
 				DEVELOPMENT_TEAM = 8YQ258U397;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UVGTour/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is utlizied for arkit to give user horizontal and vertical info";
+				INFOPLIST_KEY_NSNearbyInteractionAllowOnceUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
+				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
