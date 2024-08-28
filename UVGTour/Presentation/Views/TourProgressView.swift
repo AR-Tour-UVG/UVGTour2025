@@ -10,6 +10,8 @@ import SwiftUI
 /// Displays the tour progress and opens the stop detail view.
 struct TourProgressView: View {
     @EnvironmentObject var tourViewModel: TourViewModel
+    @State private var expanded: Bool = false
+    
     var tour: Tour { tourViewModel.tour }
     var nextStop: Stop { tour.nextStop }
     var body: some View {
@@ -21,20 +23,32 @@ struct TourProgressView: View {
                 .clipShape(Circle())
                 .offset(y: Sizes.p24)
                 .zIndex(1)
-            VStack {
-                Text(tour.nextStop.name).font(.title3).bold()
-                tourProgressContainer
-                .padding(.horizontal, Sizes.p24)
+            if (expanded) {
+                VStack {
+                    TourStopView(stop: nextStop)
+                    tourProgressContainer
+                }
+                .uvgTourContainer()
                 
-                
+            } else {
+                collapsedTourStopView
+                    .uvgTourContainer()
             }
-            .padding(.vertical, Sizes.p20)
-            .padding(.top, Sizes.p20) // Give space to the emoji
-            .frame(maxWidth: .infinity)
-            .background(Color.background)
-            .cornerRadius(25.0)
+        }
+        .onTapGesture {
+            expanded.toggle()
+        }
+        .sensoryFeedback(.selection, trigger: expanded)
+    }
+    
+    
+    var collapsedTourStopView: some View {
+        VStack {
+            Text(tour.nextStop.name).font(.title3).bold()
+            tourProgressContainer
         }
     }
+   
     
     var tourProgressContainer: some View {
         VStack(alignment: .leading) {
@@ -48,6 +62,7 @@ struct TourProgressView: View {
                 .buttonStyle(BorderedProminentButtonStyle())
             }
         }
+        .padding(.horizontal, Sizes.p24)
     }
 }
 
@@ -59,6 +74,7 @@ struct TourProgressView: View {
         Color.gray.ignoresSafeArea()
         TourProgressView()
             .environmentObject(tourViewModel)
+            
         
     }
     
