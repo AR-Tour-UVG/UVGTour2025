@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 /// Screen for allowing the progression of a ``[[Tour]]``
 struct TourScreen: View {
-    
     @StateObject var tourViewModel: TourViewModel
+    @State private var locationManager = CLLocationManager()
     
     var body: some View {
         ZStack {
             Color.gray.ignoresSafeArea()
-            Text("AR arrow here")
+            ARTourView()
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .ignoresSafeArea()
+
             VStack(spacing: Sizes.p12) {
                 Image("uvg")
                     .resizable()
@@ -35,6 +39,7 @@ struct TourScreen: View {
         .sensoryFeedback(.success, trigger: tourViewModel.tour.nextStop)
     }
 }
+
 
 #Preview {
     let tour = LocalToursDatasource.tours[0]
