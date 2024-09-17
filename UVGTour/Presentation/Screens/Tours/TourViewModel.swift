@@ -20,6 +20,13 @@ class TourViewModel: ObservableObject {
         guard let sensor else { return nil }
         return Int(sensor.distance)
     }
+    var isInStopSensor: Bool {
+        if let distanceToStopSensor {
+            let arriveThreshold = 0
+            return distanceToStopSensor <= arriveThreshold
+        }
+        return false
+    }
     var sensorsRepository: SensorRepository
     var watchSensorsUseCase: WatchSensorsUseCase
     

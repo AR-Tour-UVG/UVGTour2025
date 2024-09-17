@@ -13,9 +13,10 @@ struct DistanceIndicatorView: View {
     let arriveThreshold = 0
     var indicatorText: String {
         if arrived {
-            return "Llegaste".hardcoded
+            return NSLocalizedString("arrived", comment: "User has arrived.")
         }
-        return "\(distance) \(distance > 1 ? "metros" : "metro")".hardcoded
+        let formatKey = distance > 1 ? "distanceMetersPlural" : "distanceMeter"
+        return String.localizedStringWithFormat(NSLocalizedString(formatKey, comment: ""), distance)
         
     }
     var arrived: Bool { distance <= arriveThreshold }
@@ -52,7 +53,8 @@ struct DistanceIndicatorView: View {
         Color.black.ignoresSafeArea()
         VStack {
             DistanceIndicatorView(distance: 5)
-            DistanceIndicatorView(distance: 3)
+            DistanceIndicatorView(distance: 1)
+            DistanceIndicatorView(distance: 0)
         }
     }
     

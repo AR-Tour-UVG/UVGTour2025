@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		702BBA572C8125460017C722 /* ARTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BBA562C8125460017C722 /* ARTourView.swift */; };
+		704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D30782C83D0A100B2B7C6 /* LocationManager.swift */; };
+		705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 705456202C99D31700E680C6 /* Localizable.xcstrings */; };
 		706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */; };
 		7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; };
 		7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -35,6 +38,7 @@
 		70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC272C7A570900C4E735 /* TourProgressView.swift */; };
 		70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC292C7A586300C4E735 /* TourViewModel.swift */; };
 		70DC53322C7D432100F6A45A /* DistanceIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */; };
+		70E90E7D2C83A155004D5A5C /* arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 70E90E7C2C83A155004D5A5C /* arrow.usdz */; };
 		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
 		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
 		70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */; };
@@ -73,6 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		702BBA562C8125460017C722 /* ARTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTourView.swift; sourceTree = "<group>"; };
+		704D30782C83D0A100B2B7C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		705456202C99D31700E680C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressIndicatorView.swift; sourceTree = "<group>"; };
 		706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EstimoteUWB.xcframework; path = "../../../Downloads/iOS-Estimote-UWB-SDK-master/EstimoteUWB.xcframework"; sourceTree = "<group>"; };
 		706004902C7ECD72003AA384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		70BDDC272C7A570900C4E735 /* TourProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressView.swift; sourceTree = "<group>"; };
 		70BDDC292C7A586300C4E735 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 		70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceIndicatorView.swift; sourceTree = "<group>"; };
+		70E90E7C2C83A155004D5A5C /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = arrow.usdz; path = ../../../ARTourUVG/ARTourUVG/View/Screens/Tour/arrow.usdz; sourceTree = "<group>"; };
 		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
 		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListScreen.swift; sourceTree = "<group>"; };
@@ -135,9 +143,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		704D30772C83D08E00B2B7C6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				704D30782C83D0A100B2B7C6 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		70BB351F2C713EDB00120FA6 = {
 			isa = PBXGroup;
 			children = (
+				705456202C99D31700E680C6 /* Localizable.xcstrings */,
 				70BB352A2C713EDB00120FA6 /* UVGTour */,
 				70BB355F2C71510E00120FA6 /* UVGTourTests */,
 				70BB35292C713EDB00120FA6 /* Products */,
@@ -157,6 +174,7 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
+				70E90E7B2C83A147004D5A5C /* 3DModels */,
 				706004902C7ECD72003AA384 /* Info.plist */,
 				70BDDC1C2C7A4DC100C4E735 /* Application */,
 				70BB353A2C713F6A00120FA6 /* Presentation */,
@@ -201,6 +219,7 @@
 		70BB353B2C713F7C00120FA6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				704D30772C83D08E00B2B7C6 /* Managers */,
 				70BB354E2C71449400120FA6 /* Utils */,
 				70BB354D2C71448F00120FA6 /* Extensions */,
 				70EFA5F32C729F9E00A45190 /* Errors.swift */,
@@ -390,8 +409,17 @@
 				70BDDC272C7A570900C4E735 /* TourProgressView.swift */,
 				70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */,
 				706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */,
+				702BBA562C8125460017C722 /* ARTourView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		70E90E7B2C83A147004D5A5C /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				70E90E7C2C83A155004D5A5C /* arrow.usdz */,
+			);
+			path = 3DModels;
 			sourceTree = "<group>";
 		};
 		70EFA5ED2C7163F400A45190 /* Models */ = {
@@ -555,6 +583,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 70BB351F2C713EDB00120FA6;
 			packageReferences = (
@@ -577,6 +606,8 @@
 			files = (
 				70BB35332C713EDC00120FA6 /* Preview Assets.xcassets in Resources */,
 				70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */,
+				705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */,
+				70E90E7D2C83A155004D5A5C /* arrow.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +632,7 @@
 				70BB354C2C71445000120FA6 /* EstimoteSensorDatasource.swift in Sources */,
 				70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */,
 				70BB35532C7146C000120FA6 /* TestSensorScreen.swift in Sources */,
+				704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */,
 				70EFA6032C72A39B00A45190 /* ListToursUseCase.swift in Sources */,
 				70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */,
 				70EFA5FF2C72A28100A45190 /* LocalToursDatasource.swift in Sources */,
@@ -613,6 +645,7 @@
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
 				70EFA6012C72A2F800A45190 /* ToursRepositoryImpl.swift in Sources */,
+				702BBA572C8125460017C722 /* ARTourView.swift in Sources */,
 				70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */,
 				70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */,
 				70DC53322C7D432100F6A45A /* DistanceIndicatorView.swift in Sources */,
@@ -783,6 +816,7 @@
 				INFOPLIST_FILE = UVGTour/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is utlizied for arkit to give user horizontal and vertical info";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "UVGTour needs access to your location to display directions on the tour.";
 				INFOPLIST_KEY_NSNearbyInteractionAllowOnceUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -818,6 +852,7 @@
 				INFOPLIST_FILE = UVGTour/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is utlizied for arkit to give user horizontal and vertical info";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "UVGTour needs access to your location to display directions on the tour.";
 				INFOPLIST_KEY_NSNearbyInteractionAllowOnceUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_NSNearbyInteractionUsageDescription = "Turn on to allow \"UVG TOUR\" to connect to accessories.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
