@@ -19,6 +19,7 @@ struct Tour: Identifiable, Equatable {
     private(set) var stops: [Stop]
     var currentStop: Stop? = nil
     
+    
     var nextStop: Stop {
         guard let currentStop else { return stops[0] }
         // Get index for the currentStop
@@ -74,6 +75,7 @@ struct Stop: Identifiable, Equatable {
     let description: String
     let emoji: String
     let sensorId: String
+    let nextStopDirection: Float // Direction to the next stop in radians. 0 indicates the north and pi is south. Counter clock wise
     private(set) var completed: Bool = false
     private(set) var visited: Bool = false
     

@@ -17,8 +17,7 @@ struct TourStopView: View {
                 .bold()
             ScrollView {
                 Text(stop.description)
-                RoundedRectangle(cornerRadius: 25.0)
-                    .fill(.red)
+                Image("uvg")
                     .frame(height: 250)
                     
             }

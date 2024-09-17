@@ -43,7 +43,7 @@ extension EstimoteSensorDatasource: EstimoteUWBManagerDelegate {
     
     
     func didUpdatePosition(for device: EstimoteUWB.EstimoteUWBDevice) {
-        print("Position updated for device: \(device)")
+//        print("Position updated for device: \(device)")
         if let index = sensors.firstIndex(where: { sensor in
             sensor.id == device.id
         }) {
@@ -56,7 +56,7 @@ extension EstimoteSensorDatasource: EstimoteUWBManagerDelegate {
     
     
     func didDiscover(device: UWBIdentifiable, with rssi: NSNumber, from manager: EstimoteUWBManager) {
-        print("Discovered device: \(device.publicIdentifier) rssi: \(rssi)")
+//        print("Discovered device: \(device.publicIdentifier) rssi: \(rssi)")
     }
     
     
@@ -66,12 +66,12 @@ extension EstimoteSensorDatasource: EstimoteUWBManagerDelegate {
     
     
     func didDisconnect(from device: UWBIdentifiable, error: Error?) {
-        print("Disconnected from device: \(device.publicIdentifier)- error: \(String(describing: error))")
+//        print("Disconnected from device: \(device.publicIdentifier)- error: \(String(describing: error))")
     }
     
 
     func didFailToConnect(to device: UWBIdentifiable, error: Error?) {
-        print("Failed to conenct to: \(device.publicIdentifier) - error: \(String(describing: error))")
+//        print("Failed to conenct to: \(device.publicIdentifier) - error: \(String(describing: error))")
     }
     
     
