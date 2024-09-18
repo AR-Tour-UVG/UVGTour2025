@@ -23,7 +23,7 @@ final class TourTests: XCTestCase {
         // Arrange
         var tour = LocalToursDatasource.tours[0]
         // Act
-        for s in tour.stops {
+        for _ in tour.stops {
             tour.completeStop()
         }
         // Assert
@@ -32,7 +32,7 @@ final class TourTests: XCTestCase {
     
     func testTour_whenNoStopCompleted_IsNotCompleted() {
         // Arrange
-        var tour = LocalToursDatasource.tours[0]
+        let tour = LocalToursDatasource.tours[0]
         // Assert
         XCTAssertFalse(tour.completed)
     }

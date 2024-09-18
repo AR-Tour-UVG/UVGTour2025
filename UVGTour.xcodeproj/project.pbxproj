@@ -10,6 +10,7 @@
 		702BBA572C8125460017C722 /* ARTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BBA562C8125460017C722 /* ARTourView.swift */; };
 		704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D30782C83D0A100B2B7C6 /* LocationManager.swift */; };
 		705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 705456202C99D31700E680C6 /* Localizable.xcstrings */; };
+		705A66682C9A51C80006D62B /* arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 705A66672C9A51C80006D62B /* arrow.usdz */; };
 		706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */; };
 		7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; };
 		7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -38,7 +39,6 @@
 		70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC272C7A570900C4E735 /* TourProgressView.swift */; };
 		70BDDC2A2C7A586300C4E735 /* TourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BDDC292C7A586300C4E735 /* TourViewModel.swift */; };
 		70DC53322C7D432100F6A45A /* DistanceIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */; };
-		70E90E7D2C83A155004D5A5C /* arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 70E90E7C2C83A155004D5A5C /* arrow.usdz */; };
 		70EFA5EF2C7163FD00A45190 /* WebSocketSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */; };
 		70EFA5F42C729F9E00A45190 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F32C729F9E00A45190 /* Errors.swift */; };
 		70EFA5F72C72A0A600A45190 /* ToursListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */; };
@@ -80,6 +80,7 @@
 		702BBA562C8125460017C722 /* ARTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTourView.swift; sourceTree = "<group>"; };
 		704D30782C83D0A100B2B7C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		705456202C99D31700E680C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		705A66672C9A51C80006D62B /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = arrow.usdz; path = ../../../../../Downloads/arrow.usdz; sourceTree = "<group>"; };
 		706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressIndicatorView.swift; sourceTree = "<group>"; };
 		706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EstimoteUWB.xcframework; path = "../../../Downloads/iOS-Estimote-UWB-SDK-master/EstimoteUWB.xcframework"; sourceTree = "<group>"; };
 		706004902C7ECD72003AA384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		70BDDC272C7A570900C4E735 /* TourProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressView.swift; sourceTree = "<group>"; };
 		70BDDC292C7A586300C4E735 /* TourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewModel.swift; sourceTree = "<group>"; };
 		70DC53312C7D432100F6A45A /* DistanceIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceIndicatorView.swift; sourceTree = "<group>"; };
-		70E90E7C2C83A155004D5A5C /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = arrow.usdz; path = ../../../ARTourUVG/ARTourUVG/View/Screens/Tour/arrow.usdz; sourceTree = "<group>"; };
 		70EFA5EE2C7163FD00A45190 /* WebSocketSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketSensor.swift; sourceTree = "<group>"; };
 		70EFA5F32C729F9E00A45190 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		70EFA5F62C72A0A600A45190 /* ToursListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListScreen.swift; sourceTree = "<group>"; };
@@ -417,7 +417,7 @@
 		70E90E7B2C83A147004D5A5C /* 3DModels */ = {
 			isa = PBXGroup;
 			children = (
-				70E90E7C2C83A155004D5A5C /* arrow.usdz */,
+				705A66672C9A51C80006D62B /* arrow.usdz */,
 			);
 			path = 3DModels;
 			sourceTree = "<group>";
@@ -605,9 +605,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BB35332C713EDC00120FA6 /* Preview Assets.xcassets in Resources */,
+				705A66682C9A51C80006D62B /* arrow.usdz in Resources */,
 				70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */,
 				705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */,
-				70E90E7D2C83A155004D5A5C /* arrow.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
