@@ -29,7 +29,6 @@ class SocketIOSensorDatasource: SensorRepository {
     }
     
     
-    
     // MARK: Socket
     
     /// Listents to socket updates, configures the events to update the UI.

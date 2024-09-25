@@ -19,6 +19,10 @@ struct Tour: Identifiable, Equatable {
     private(set) var stops: [Stop]
     var currentStop: Stop? = nil
     
+    var tourStops: [Stop] {
+        stops.filter { !$0.isWaypoint }
+    }
+    
     
     var nextStop: Stop {
         guard let currentStop else { return stops[0] }
@@ -26,22 +30,33 @@ struct Tour: Identifiable, Equatable {
         let index = stops.firstIndex { s in
             s.id == currentStop.id
         }
-        if index! + 1 > stops.count { return stops[0] }    // Fall back to first stop
-        return stops[min(index! + 1, stops.count - 1)]
+        if index! + 1 > tourStops.count { return stops[0] }    // Fall back to first stop
+        return tourStops[min(index! + 1, tourStops.count - 1)]
     }
     
     var completed: Bool {
-        stops.filter {$0.completed}.count == stops.count
+        tourStops.filter {$0.completed}.count == tourStops.count
     }
     
     var willBeCompleted: Bool {
-        stops.filter {$0.completed}.count == stops.count - 1
+        tourStops.filter {$0.completed}.count == tourStops.count - 1
     }
     
     /// Exposes the total of stops the user has completed
     var progress: Int {
-        let completeStops = stops.filter { $0.completed }
+        let completeStops = tourStops.filter { $0.completed }
         return completeStops.count
+    }
+    
+    /// Gets the next direction for the with a given ``sensorId``
+    func getNextDirection(sensorId: String) -> Float? {
+        guard let stop = self.stops.first(where: { s in
+            s.sensorId == sensorId
+        }) else { return nil }
+        if nextStop == stops[0] {
+            return nil
+        }
+        return stop.nextStopDirection
     }
     
     
@@ -76,8 +91,10 @@ struct Stop: Identifiable, Equatable {
     let emoji: String
     let sensorId: String
     let nextStopDirection: Float // Direction to the next stop in radians. 0 indicates the north and pi is south. Counter clock wise
+    let imageName: String?
     private(set) var completed: Bool = false
     private(set) var visited: Bool = false
+    private(set) var isWaypoint: Bool = false // A waypoint is a stop that does not show extra information to the tour.
     
     /// Marks the stop as completed
     mutating func complete() {

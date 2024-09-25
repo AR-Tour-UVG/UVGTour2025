@@ -52,9 +52,9 @@ struct TourProgressView: View {
     
     var tourProgressContainer: some View {
         VStack(alignment: .leading) {
-            Text(String.localizedStringWithFormat(NSLocalizedString("pointsCompleted", comment: ""), tour.progress, tour.stops.count))
+            Text(String.localizedStringWithFormat(NSLocalizedString("pointsCompleted", comment: ""), tour.progress, tour.tourStops.count))
             HStack {
-                TourProgressIndicatorView(progress: Double(tour.progress) / Double(tour.stops.count))
+                TourProgressIndicatorView(progress: Double(tour.progress) / Double(tour.tourStops.count))
                 Spacer()
                 Button(tour.willBeCompleted ? NSLocalizedString("finish", comment: "") : NSLocalizedString("next", comment: "")) {
                     tourViewModel.nextStop()
@@ -69,12 +69,12 @@ struct TourProgressView: View {
 
 #Preview {
     var tour = LocalToursDatasource.tours[0]
-    tour.completeStop()
     let sensorsRepository = SensorRepositoryImpl(datasource: SocketIOSensorDatasource())
     let tourViewModel = TourViewModel(tour: tour, sensorsRepository: sensorsRepository)
     return ZStack(alignment: .bottom) {
         Color.gray.ignoresSafeArea()
         TourProgressView()
+            .padding(.horizontal, Sizes.p20)
             .environmentObject(tourViewModel)
             
         

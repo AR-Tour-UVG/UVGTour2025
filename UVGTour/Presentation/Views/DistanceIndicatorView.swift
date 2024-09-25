@@ -50,7 +50,7 @@ struct DistanceIndicatorView: View {
 
 #Preview {
     ZStack {
-        Color.black.ignoresSafeArea()
+        Color.gray.ignoresSafeArea()
         VStack {
             DistanceIndicatorView(distance: 5)
             DistanceIndicatorView(distance: 1)

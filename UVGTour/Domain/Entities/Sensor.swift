@@ -16,3 +16,5 @@ struct Sensor: Identifiable, Equatable {
     var id: String
     var distance: Float
 }
+
+

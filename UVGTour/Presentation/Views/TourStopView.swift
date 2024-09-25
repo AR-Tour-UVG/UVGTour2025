@@ -17,9 +17,11 @@ struct TourStopView: View {
                 .bold()
             ScrollView {
                 Text(stop.description)
-                Image("uvg")
-                    .frame(height: 250)
-                    
+                Image(stop.imageName ?? "plazauvg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 250,height: 250)
+                    .cornerRadius(Sizes.radiusSmall)
             }
             
         }
@@ -29,5 +31,5 @@ struct TourStopView: View {
 
 
 #Preview {
-    TourStopView(stop: LocalToursDatasource.tours[0].stops[0])
+    TourStopView(stop: LocalToursDatasource.tours[0].stops[1])
 }

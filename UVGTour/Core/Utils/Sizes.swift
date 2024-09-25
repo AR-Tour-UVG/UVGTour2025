@@ -15,4 +15,6 @@ enum Sizes {
     static let p16: CGFloat = 16.0
     static let p20: CGFloat = 20.0
     static let p24: CGFloat = 24.0
+    
+    static let radiusSmall: CGFloat = 12.0
 }

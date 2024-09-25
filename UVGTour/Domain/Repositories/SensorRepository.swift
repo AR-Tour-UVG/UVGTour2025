@@ -17,3 +17,6 @@ import Combine
 protocol SensorRepository {
     var sensorsPublisher: AnyPublisher<[Sensor], Never> { get }
 }
+
+
+

@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%f meters" : {
+
+    },
     "arrived" : {
       "comment" : "The user has arrived to a destination",
       "extractionState" : "manual",
@@ -73,6 +76,9 @@
         }
       }
     },
+    "Hello, world!" : {
+
+    },
     "next" : {
       "comment" : "Next item",
       "extractionState" : "manual",
@@ -108,6 +114,18 @@
           }
         }
       }
+    },
+    "Sensors detected: " : {
+
+    },
+    "Start" : {
+
+    },
+    "Start tour" : {
+
+    },
+    "Tours" : {
+
     }
   },
   "version" : "1.0"

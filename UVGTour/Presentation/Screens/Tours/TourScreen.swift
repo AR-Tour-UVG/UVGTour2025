@@ -43,25 +43,26 @@ struct TourScreen: View {
         }
         .sensoryFeedback(.success, trigger: tourViewModel.tour.nextStop)
         .onChange(of: tourViewModel.tour, { _, tour in
-            let nextAngle = tour.currentStop?.nextStopDirection
+            let nextAngle = tourViewModel.nextStopDirection
             guard let nextAngle  else {
-                showArrow = false
                 return
             }
             let currentAngleDegrees = Float(locationManager.degrees)
             angle = (currentAngleDegrees * .pi / 180) + nextAngle
-            showArrow = !tour.completed && !tourViewModel.isInStopSensor
+            
         })
         .onChange(of: locationManager.degrees) { oldValue, newValue in
-            let nextAngle = tourViewModel.tour.currentStop?.nextStopDirection
+            let nextAngle = tourViewModel.nextStopDirection
             if let nextAngle {
                 let currentAngleDegrees = Float(locationManager.degrees)
                 angle = (currentAngleDegrees * .pi / 180) + nextAngle
-                
             }
         }
-        .onChange(of: tourViewModel.isInStopSensor) { _, isInStopSensor in
-            showArrow = !tourViewModel.tour.completed && !isInStopSensor
+        .onChange(of: tourViewModel.nextStopDirection) { oldValue, newValue in
+            showArrow = newValue != nil
+        }
+        .onChange(of: tourViewModel.isInStopSensor) { oldValue, newValue in
+            showArrow = !newValue
         }
     }
 }
