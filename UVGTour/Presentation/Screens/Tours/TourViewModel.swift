@@ -53,7 +53,7 @@ class TourViewModel: ObservableObject {
             }
             // Get the closest sensor
             if let closestSensor = sensors.sorted(by: {$0.distance < $1.distance}).first {
-                if closestSensor.distance <= 0 {
+                if closestSensor.distance <= 1 {
                     self.nextStopDirection = self.tour.getNextDirection(sensorId: closestSensor.id)
                     print("Next stop direction: \(self.nextStopDirection)")
                 }
@@ -67,6 +67,7 @@ class TourViewModel: ObservableObject {
     /// Goes to the next stop.
     func nextStop() {
         self.tour.completeStop()
+        self.nextStopDirection = self.tour.currentStop?.nextStopDirection
     }
     
     

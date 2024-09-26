@@ -50,6 +50,9 @@ struct Tour: Identifiable, Equatable {
     
     /// Gets the next direction for the with a given ``sensorId``
     func getNextDirection(sensorId: String) -> Float? {
+        if self.completed {
+            return nil
+        }
         guard let stop = self.stops.first(where: { s in
             s.sensorId == sensorId
         }) else { return nil }

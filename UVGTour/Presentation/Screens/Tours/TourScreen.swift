@@ -34,6 +34,7 @@ struct TourScreen: View {
                 if let distanceToStopSensor = tourViewModel.distanceToStopSensor {
                     DistanceIndicatorView(distance: distanceToStopSensor )
                         .offset(y: Sizes.p24)
+                        .opacity(tourViewModel.tour.completed ? 0 : 1)
                 }
                 TourProgressView()
                     .padding(.horizontal, Sizes.p24)
@@ -60,9 +61,13 @@ struct TourScreen: View {
         }
         .onChange(of: tourViewModel.nextStopDirection) { oldValue, newValue in
             showArrow = newValue != nil
+            if let newValue {
+                let currentAngleDegrees = Float(locationManager.degrees)
+                angle = (currentAngleDegrees * .pi / 180) + newValue
+            }
         }
         .onChange(of: tourViewModel.isInStopSensor) { oldValue, newValue in
-            showArrow = !newValue
+            showArrow = !newValue && tourViewModel.tour.currentStop != nil
         }
     }
 }

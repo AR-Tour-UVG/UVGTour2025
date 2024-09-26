@@ -47,7 +47,7 @@ struct ARTourView: UIViewRepresentable {
     
     func arrowScale() -> SIMD3<Float> {
         if showArrow {
-            return SIMD3<Float>(0.5,0.5,0.5)
+            return SIMD3<Float>(0.4,0.4,0.4)
         } else {
             return SIMD3<Float>(0.001,0.001,0.001)
         }
