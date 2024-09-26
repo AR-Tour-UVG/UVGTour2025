@@ -11,6 +11,7 @@ import SwiftUI
 struct ToursListScreen: View {
     @EnvironmentObject var tourSelection: TourSelection
     @StateObject var viewModel: ToursListViewModel
+    @Binding var show: Bool
     @State var showStartTourAlert: Bool = false
     @State var selectedTour: Tour? = nil
     
@@ -25,8 +26,9 @@ struct ToursListScreen: View {
             }
         }
         .confirmationDialog("Start tour", isPresented: $showStartTourAlert) {
-            Button("Start") {
+            Button(NSLocalizedString("Start", comment: "")) {
                 tourSelection.selectedTour = selectedTour
+                show = false
             }
         }
     }
@@ -38,7 +40,7 @@ struct ToursListScreen: View {
     let useCase = ListToursUseCase(toursRepository: repository)
     let tourSelection = TourSelection()
     return NavigationView(content: {
-        ToursListScreen(viewModel: ToursListViewModel(useCase: useCase))
+        ToursListScreen(viewModel: ToursListViewModel(useCase: useCase), show: .constant(true))
             .navigationTitle("Tours")
             .environmentObject(tourSelection)
     })

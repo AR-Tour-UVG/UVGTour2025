@@ -4,6 +4,12 @@
     "%f meters" : {
 
     },
+    "🔎" : {
+
+    },
+    "🧭" : {
+
+    },
     "arrived" : {
       "comment" : "The user has arrived to a destination",
       "extractionState" : "manual",
@@ -77,7 +83,14 @@
       }
     },
     "Hello, world!" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hola mundo!"
+          }
+        }
+      }
     },
     "next" : {
       "comment" : "Next item",
@@ -116,16 +129,50 @@
       }
     },
     "Sensors detected: " : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sensores detectados"
+          }
+        }
+      }
     },
     "Start" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezar"
+          }
+        }
+      }
     },
     "Start tour" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezar tour"
+          }
+        }
+      }
     },
     "Tours" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tours"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

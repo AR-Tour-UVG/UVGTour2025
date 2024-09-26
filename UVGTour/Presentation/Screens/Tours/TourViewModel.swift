@@ -75,4 +75,9 @@ class TourViewModel: ObservableObject {
     func visited(stop: Stop) {
         self.tour.visited(stop)
     }
+    
+    
+    func selectTour(_ tour: Tour) {
+        self.tour = tour
+    }
 }
