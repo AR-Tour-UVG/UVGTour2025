@@ -56,6 +56,31 @@ struct LocalToursDatasource: ToursRepository {
                 Stop(name: "Comedor", description: "El comedor en la biblioteca del CIT de la Universidad del Valle de Guatemala es un espacio amplio y cómodo, ideal para disfrutar de un descanso entre sesiones de estudio. Con mesas y sillas modernas, ofrece un ambiente relajado donde los estudiantes pueden comer, socializar o simplemente desconectar. Equipado con microondas y máquinas expendedoras, el comedor facilita el acceso rápido a refrigerios.", emoji: "🍲", sensorId: "fd7d34c180ba4e9610a4439cd205712c", nextStopDirection: .pi, imageName: nil), // sur
             ]),
         
+        Tour(id: "3", name: "Biblioteca Waypoint", description: "Demo de waypoints en biblioteca", duration: .seconds(60 * 5), stops: [
+            Stop(
+                name: "Salon N",
+                description: """
+                El Salón N permite a estudiantes discutir y estudiar.
+                """,
+                emoji: "📚",
+                sensorId: "4056668d19dfe5fab47c9e83c82a982b", nextStopDirection: .pi/4 + .pi/12, // osete
+                imageName: "salonN"
+                
+            ),
+            Stop(
+                name: "Escritorio",
+                description: """
+                """,
+                emoji: "",
+                sensorId: "8cc2e0a06f1666b863df2ea773e7ad02", nextStopDirection: .pi/2 + .pi/4 + .pi/12, // osete
+                imageName: nil,
+                isWaypoint: true
+            ),
+            Stop(name: "Salon Silencioso", description: "El salón silencioso en la biblioteca del CIT en la Universidad del Valle de Guatemala está diseñado para quienes buscan un entorno de estudio completamente libre de distracciones. Con un ambiente minimalista y luz tenue, el espacio está equipado con mesas individuales y sillas ergonómicas, donde se fomenta la concentración profunda y el trabajo en silencio absoluto. Los dispositivos electrónicos deben ser usados en modo silencioso, y el respeto por el entorno tranquilo es primordial. Es el lugar perfecto para realizar lecturas intensas, escribir o preparar exámenes en un entorno de total calma.", emoji: "🤫", sensorId: "fd7d34c180ba4e9610a4439cd205712c", nextStopDirection: 0,
+                imageName: "silenciosoBiblio"),
+        
+        ])
+        
     ]
     
     func fetchAllTours() async throws -> [Tour] {
