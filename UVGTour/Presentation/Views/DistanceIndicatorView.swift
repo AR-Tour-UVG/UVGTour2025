@@ -22,7 +22,9 @@ struct DistanceIndicatorView: View {
     var arrived: Bool { distance <= arriveThreshold }
     var body: some View {
         Text(indicatorText)
+            .foregroundStyle(arrived ? .white : .black)
             .font(.caption2)
+            .fontWeight(.semibold)
             .padding(.vertical, Sizes.p8)
             .frame(width: 100)
             .background(arrived  ? .uvgGreen : .white)
