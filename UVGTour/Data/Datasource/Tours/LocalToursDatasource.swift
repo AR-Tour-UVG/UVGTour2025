@@ -9,6 +9,33 @@
 
 import Foundation
 
+
+// Posibles direcciones
+enum Direction {
+    case norte
+    case noreste
+    case este
+    case sureste
+    case sur
+    case suroeste
+    case oeste
+    case noroeste
+
+    var radians: Float {
+        switch self {
+        case .norte: return 0
+        case .noreste: return 45
+        case .este: return 90
+        case .sureste: return 135
+        case .sur: return 180
+        case .suroeste: return 225
+        case .oeste: return 270
+        case .noroeste: return 315
+        }
+    }
+}
+
+
 /// Datasource with tours stored locally.
 struct LocalToursDatasource: ToursRepository {
     
@@ -24,8 +51,9 @@ struct LocalToursDatasource: ToursRepository {
                     description: "Tour de prueba de funcionalidad de app",
                     emoji: "🟢",
                     sensorId: "c6d9a39a2dd2daf6898f06a82e5d642f",
-                    nextStopDirection: -.pi/4,
-                    imageName: nil
+                    nextStopDirection: Direction.norte.radians,
+                    imageName: nil,
+                    isWaypoint: false
                     
                 ),
                 
@@ -34,7 +62,7 @@ struct LocalToursDatasource: ToursRepository {
                     description: "Waypoint only",
                     emoji: "🟡",
                     sensorId: "51e3b3def31fdc943735915249be6610",
-                    nextStopDirection: .pi/4,
+                    nextStopDirection: Direction.sur.radians,
                     imageName: nil,
                     isWaypoint: true
                 ),
@@ -44,8 +72,9 @@ struct LocalToursDatasource: ToursRepository {
                     description: "Waypoint only",
                     emoji: "🔴",
                     sensorId: "5d41cbaa8d563dfc9652cc1ce6cb920d",
-                    nextStopDirection: .pi/4,
-                    imageName: nil
+                    nextStopDirection: Direction.este.radians,
+                    imageName: nil,
+                    isWaypoint: false
                 )
             ])
     
