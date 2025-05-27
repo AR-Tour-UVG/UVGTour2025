@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A5A2AC42DE5381600CADD81 /* arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4A5A2AC22DE5381600CADD81 /* arrow.usdz */; };
+		4A5A2AC72DE538E400CADD81 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; };
+		4A5A2AC82DE53C1A00CADD81 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; };
+		4A5A2AC92DE53C1A00CADD81 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		702BBA572C8125460017C722 /* ARTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BBA562C8125460017C722 /* ARTourView.swift */; };
 		704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D30782C83D0A100B2B7C6 /* LocationManager.swift */; };
 		705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 705456202C99D31700E680C6 /* Localizable.xcstrings */; };
-		705A66682C9A51C80006D62B /* arrow.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 705A66672C9A51C80006D62B /* arrow.usdz */; };
 		706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */; };
-		7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; };
-		7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB352B2C713EDB00120FA6 /* UVGTourApp.swift */; };
 		70BB352E2C713EDB00120FA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB352D2C713EDB00120FA6 /* ContentView.swift */; };
 		70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BB352F2C713EDC00120FA6 /* Assets.xcassets */; };
@@ -69,7 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7060048E2C7ECB82003AA384 /* EstimoteUWB.xcframework in Embed Frameworks */,
+				4A5A2AC92DE53C1A00CADD81 /* EstimoteUWB.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,12 +78,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A5A2AC22DE5381600CADD81 /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = arrow.usdz; sourceTree = "<group>"; };
+		4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = EstimoteUWB.xcframework; sourceTree = "<group>"; };
 		702BBA562C8125460017C722 /* ARTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTourView.swift; sourceTree = "<group>"; };
 		704D30782C83D0A100B2B7C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		705456202C99D31700E680C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		705A66672C9A51C80006D62B /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = arrow.usdz; path = ../../../../../Downloads/arrow.usdz; sourceTree = "<group>"; };
 		706004872C7EAA3F003AA384 /* TourProgressIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourProgressIndicatorView.swift; sourceTree = "<group>"; };
-		706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EstimoteUWB.xcframework; path = "../../../Downloads/iOS-Estimote-UWB-SDK-master/EstimoteUWB.xcframework"; sourceTree = "<group>"; };
 		706004902C7ECD72003AA384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		70BB35282C713EDB00120FA6 /* UVGTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVGTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BB352B2C713EDB00120FA6 /* UVGTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVGTourApp.swift; sourceTree = "<group>"; };
@@ -129,7 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7060048D2C7ECB82003AA384 /* EstimoteUWB.xcframework in Frameworks */,
+				4A5A2AC82DE53C1A00CADD81 /* EstimoteUWB.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +138,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A5A2AC72DE538E400CADD81 /* EstimoteUWB.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A5A2AC32DE5381600CADD81 /* 3DModels */ = {
+			isa = PBXGroup;
+			children = (
+				4A5A2AC22DE5381600CADD81 /* arrow.usdz */,
+			);
+			path = 3DModels;
+			sourceTree = "<group>";
+		};
 		704D30772C83D08E00B2B7C6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +184,6 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
-				70E90E7B2C83A147004D5A5C /* 3DModels */,
 				706004902C7ECD72003AA384 /* Info.plist */,
 				70BDDC1C2C7A4DC100C4E735 /* Application */,
 				70BB353A2C713F6A00120FA6 /* Presentation */,
@@ -185,6 +194,7 @@
 				70BB352D2C713EDB00120FA6 /* ContentView.swift */,
 				70BB352F2C713EDC00120FA6 /* Assets.xcassets */,
 				70BB35312C713EDC00120FA6 /* Preview Content */,
+				4A5A2AC32DE5381600CADD81 /* 3DModels */,
 			);
 			path = UVGTour;
 			sourceTree = "<group>";
@@ -365,7 +375,7 @@
 		70BB35712C715BA700120FA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				706004892C7ECB32003AA384 /* EstimoteUWB.xcframework */,
+				4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,14 +422,6 @@
 				702BBA562C8125460017C722 /* ARTourView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		70E90E7B2C83A147004D5A5C /* 3DModels */ = {
-			isa = PBXGroup;
-			children = (
-				705A66672C9A51C80006D62B /* arrow.usdz */,
-			);
-			path = 3DModels;
 			sourceTree = "<group>";
 		};
 		70EFA5ED2C7163F400A45190 /* Models */ = {
@@ -605,7 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BB35332C713EDC00120FA6 /* Preview Assets.xcassets in Resources */,
-				705A66682C9A51C80006D62B /* arrow.usdz in Resources */,
+				4A5A2AC42DE5381600CADD81 /* arrow.usdz in Resources */,
 				70BB35302C713EDC00120FA6 /* Assets.xcassets in Resources */,
 				705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */,
 			);
@@ -810,7 +812,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVGTour/Preview Content\"";
-				DEVELOPMENT_TEAM = 8YQ258U397;
+				DEVELOPMENT_TEAM = Y64T776AM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UVGTour/Info.plist;
@@ -830,7 +832,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.UVGTour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Diego.UVGTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -846,7 +848,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVGTour/Preview Content\"";
-				DEVELOPMENT_TEAM = 8YQ258U397;
+				DEVELOPMENT_TEAM = Y64T776AM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UVGTour/Info.plist;
@@ -866,7 +868,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.guillermo.UVGTour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Diego.UVGTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
