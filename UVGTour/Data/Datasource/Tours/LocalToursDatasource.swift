@@ -9,30 +9,8 @@
 
 import Foundation
 
-
-// Posibles direcciones
-enum Direction {
-    case norte
-    case noreste
-    case este
-    case sureste
-    case sur
-    case suroeste
-    case oeste
-    case noroeste
-
-    var radians: Float {
-        switch self {
-        case .norte: return 0
-        case .noreste: return 45
-        case .este: return 90
-        case .sureste: return 135
-        case .sur: return 180
-        case .suroeste: return 225
-        case .oeste: return 270
-        case .noroeste: return 315
-        }
-    }
+func degreesToRadians(degrees: Float) -> Float {
+    return degrees * Float.pi / 180
 }
 
 
@@ -48,10 +26,10 @@ struct LocalToursDatasource: ToursRepository {
             stops: [
                 Stop(
                     name: "Sensor1",
-                    description: "Tour de prueba de funcionalidad de app",
+                    description: "Inicio del Tour",
                     emoji: "🟢",
                     sensorId: "c6d9a39a2dd2daf6898f06a82e5d642f",
-                    nextStopDirection: Direction.norte.radians,
+                    nextStopDirection: degreesToRadians(degrees: 60),
                     imageName: nil,
                     isWaypoint: false
                     
@@ -59,20 +37,50 @@ struct LocalToursDatasource: ToursRepository {
                 
                 Stop(
                     name: "Sensor2",
-                    description: "Waypoint only",
+                    description: "Waypoint",
                     emoji: "🟡",
                     sensorId: "51e3b3def31fdc943735915249be6610",
-                    nextStopDirection: Direction.sur.radians,
+                    nextStopDirection: degreesToRadians(degrees: 150),
                     imageName: nil,
                     isWaypoint: true
                 ),
                 
                 Stop(
                     name: "Sensor3",
-                    description: "Waypoint only",
+                    description: "Punto Medio",
                     emoji: "🔴",
                     sensorId: "5d41cbaa8d563dfc9652cc1ce6cb920d",
-                    nextStopDirection: Direction.este.radians,
+                    nextStopDirection: degreesToRadians(degrees: 145),
+                    imageName: nil,
+                    isWaypoint: false
+                ),
+                
+                Stop(
+                    name: "Sensor4",
+                    description: "Waypoint",
+                    emoji: "🟡",
+                    sensorId: "5d41cbaa8d563dfc9652cc1ce6cb920d",
+                    nextStopDirection: degreesToRadians(degrees: 35),
+                    imageName: nil,
+                    isWaypoint: true
+                ),
+                
+                Stop(
+                    name: "Sensor5",
+                    description: "Waypoint",
+                    emoji: "🟡",
+                    sensorId: "5d41cbaa8d563dfc9652cc1ce6cb920d",
+                    nextStopDirection: degreesToRadians(degrees: 110),
+                    imageName: nil,
+                    isWaypoint: true
+                ),
+                
+                Stop(
+                    name: "Sensor6",
+                    description: "Destino",
+                    emoji: "🔴",
+                    sensorId: "5d41cbaa8d563dfc9652cc1ce6cb920d",
+                    nextStopDirection: 0,
                     imageName: nil,
                     isWaypoint: false
                 )
