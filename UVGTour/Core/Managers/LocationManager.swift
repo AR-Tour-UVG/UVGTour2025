@@ -23,8 +23,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     // MARK: Conforming to protocol
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        degrees = newHeading.magneticHeading    // this uses the magnetic heading
-        // degrees = newHeading.trueHeading   // this uses the true heading
+        // degrees = newHeading.magneticHeading    // this uses the magnetic heading
+        degrees = newHeading.trueHeading   // this uses the true heading
     }
     
 }
