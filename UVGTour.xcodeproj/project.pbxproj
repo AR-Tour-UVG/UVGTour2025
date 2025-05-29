@@ -12,6 +12,7 @@
 		4A5A2AC82DE53C1A00CADD81 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; };
 		4A5A2AC92DE53C1A00CADD81 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ADF0FA12DE7D765008FC3B0 /* TourAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADF0FA02DE7D75D008FC3B0 /* TourAudioPlayer.swift */; };
+		4ADF0FB42DE7E2BF008FC3B0 /* IntroScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADF0FB32DE7E2B8008FC3B0 /* IntroScreen.swift */; };
 		702BBA572C8125460017C722 /* ARTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BBA562C8125460017C722 /* ARTourView.swift */; };
 		704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D30782C83D0A100B2B7C6 /* LocationManager.swift */; };
 		705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 705456202C99D31700E680C6 /* Localizable.xcstrings */; };
@@ -82,6 +83,7 @@
 		4A5A2AC22DE5381600CADD81 /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = arrow.usdz; sourceTree = "<group>"; };
 		4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = EstimoteUWB.xcframework; sourceTree = "<group>"; };
 		4ADF0FA02DE7D75D008FC3B0 /* TourAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourAudioPlayer.swift; sourceTree = "<group>"; };
+		4ADF0FB32DE7E2B8008FC3B0 /* IntroScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreen.swift; sourceTree = "<group>"; };
 		702BBA562C8125460017C722 /* ARTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTourView.swift; sourceTree = "<group>"; };
 		704D30782C83D0A100B2B7C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		705456202C99D31700E680C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -131,7 +133,9 @@
 		4ADF0FB22DE7D9CA008FC3B0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				welcome_polyglot.mp3,
+				guide_audio.mp3,
+				intro_audio.mp3,
+				welcome_audio.mp3,
 			);
 			target = 70BB355D2C71510E00120FA6 /* UVGTourTests */;
 		};
@@ -285,6 +289,7 @@
 		70BB35442C7143E400120FA6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4ADF0FB32DE7E2B8008FC3B0 /* IntroScreen.swift */,
 				70EFA5F52C72A09700A45190 /* Tours */,
 				70BB35512C7146B100120FA6 /* TestSensors */,
 				70BBC12E2C7FC9B400358431 /* Modifiers */,
@@ -664,6 +669,7 @@
 				70BDDC262C7A568C00C4E735 /* Sizes.swift in Sources */,
 				70BDDC1F2C7A4DD500C4E735 /* TourSelection.swift in Sources */,
 				70EFA60B2C72A91500A45190 /* ToursListViewModel.swift in Sources */,
+				4ADF0FB42DE7E2BF008FC3B0 /* IntroScreen.swift in Sources */,
 				70BBC1302C7FC9E200358431 /* TourContainer.swift in Sources */,
 				70BB352C2C713EDB00120FA6 /* UVGTourApp.swift in Sources */,
 				70BB35482C71440E00120FA6 /* SensorRepositoryImpl.swift in Sources */,
