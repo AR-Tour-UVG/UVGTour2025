@@ -34,7 +34,7 @@ struct ToursListScreen: View {
                 
                 // audio player
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                    TourAudioPlayer.play(audioNamed: "guide_audio")
+                    TourAudioPlayer.play(audioNamed: "tour_guide")
                 }
             }
         }

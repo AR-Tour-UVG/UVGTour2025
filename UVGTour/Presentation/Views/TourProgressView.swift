@@ -57,6 +57,9 @@ struct TourProgressView: View {
                 TourProgressIndicatorView(progress: Double(tour.progress) / Double(tour.tourStops.count))
                 Spacer()
                 Button(tour.willBeCompleted ? NSLocalizedString("finish", comment: "") : NSLocalizedString("next", comment: "")) {
+                    if !tour.willBeCompleted {
+                        TourAudioPlayer.play(audioNamed: "follow_arrow")
+                    }
                     tourViewModel.nextStop()
                 }
                 .buttonStyle(BorderedProminentButtonStyle())

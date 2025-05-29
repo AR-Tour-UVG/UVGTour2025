@@ -34,7 +34,7 @@ struct IntroScreen: View {
         }
         .padding()
         .onAppear {
-            TourAudioPlayer.play(audioNamed: "welcome_audio")
+            TourAudioPlayer.play(audioNamed: "welcome_msg")
         }
     }
 }

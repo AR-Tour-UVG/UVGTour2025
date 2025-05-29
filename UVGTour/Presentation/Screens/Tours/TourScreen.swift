@@ -92,12 +92,42 @@ struct TourScreen: View {
         }
         .onChange(of: tourViewModel.isInStopSensor) { oldValue, newValue in
             showArrow = !newValue && tourViewModel.tour.currentStop != nil
+            
+            guard newValue, let stop = tourViewModel.tour.currentStop else {
+                return
+            }
+            
+            // Verify if its last stop
+            let index = tourViewModel.tour.stops.firstIndex(where: { $0.id == stop.id }) ?? 0
+
+            let isLastStop = index == tourViewModel.tour.stops.count - 1
+            
+            if !isLastStop {
+                if index == 0{
+                    TourAudioPlayer.play(audioNamed: "first_stop")
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                        TourAudioPlayer.play(audioNamed: "continue_tour")
+                    }
+        
+                } else {
+                    TourAudioPlayer.play(audioNamed: "stop_info")
+                }
+
+            }
         }
+        .onChange(of: tourViewModel.tour.completed) { _, isCompleted in
+            if isCompleted {
+                TourAudioPlayer.play(audioNamed: "tour_end")
+            }
+        }
+
         .onChange(of: tourselection.selectedTour, { oldValue, newValue in
             if let newValue {
                 tourViewModel.selectTour(newValue)
             }
         })
+        
         .sheet(isPresented: $showTourListScreen, content: {
             NavigationView {
                 ToursListScreen(viewModel: ToursListViewModel(useCase: ListToursUseCase(toursRepository: ToursRepositoryImpl(datasource: LocalToursDatasource()))), show: $showTourListScreen)
@@ -106,7 +136,7 @@ struct TourScreen: View {
             
         })
         .onAppear {
-            TourAudioPlayer.play(audioNamed: "intro_audio")
+            TourAudioPlayer.play(audioNamed: "tour_startup")
         }
     }
     

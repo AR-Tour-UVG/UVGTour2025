@@ -130,19 +130,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4ADF0FB22DE7D9CA008FC3B0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		4A4A4C372DE90BC50042ACE7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				guide_audio.mp3,
-				intro_audio.mp3,
-				welcome_audio.mp3,
+				continue_tour.mp3,
+				first_stop.mp3,
+				follow_arrow.mp3,
+				stop_info.mp3,
+				tour_end.mp3,
+				tour_guide.mp3,
+				tour_startup.mp3,
+				welcome_msg.mp3,
 			);
 			target = 70BB355D2C71510E00120FA6 /* UVGTourTests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4ADF0FA22DE7D9B6008FC3B0 /* Audio */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4ADF0FB22DE7D9CA008FC3B0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Audio; sourceTree = "<group>"; };
+		4ADF0FA22DE7D9B6008FC3B0 /* Audio */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4A4A4C372DE90BC50042ACE7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Audio; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
