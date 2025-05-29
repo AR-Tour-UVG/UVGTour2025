@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		4A5A2AC72DE538E400CADD81 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; };
 		4A5A2AC82DE53C1A00CADD81 /* EstimoteUWB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; };
 		4A5A2AC92DE53C1A00CADD81 /* EstimoteUWB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ADF0FA12DE7D765008FC3B0 /* TourAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADF0FA02DE7D75D008FC3B0 /* TourAudioPlayer.swift */; };
 		702BBA572C8125460017C722 /* ARTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BBA562C8125460017C722 /* ARTourView.swift */; };
 		704D30792C83D0A100B2B7C6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704D30782C83D0A100B2B7C6 /* LocationManager.swift */; };
 		705456212C99D31700E680C6 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 705456202C99D31700E680C6 /* Localizable.xcstrings */; };
@@ -80,6 +81,7 @@
 /* Begin PBXFileReference section */
 		4A5A2AC22DE5381600CADD81 /* arrow.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = arrow.usdz; sourceTree = "<group>"; };
 		4A5A2AC52DE538E400CADD81 /* EstimoteUWB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = EstimoteUWB.xcframework; sourceTree = "<group>"; };
+		4ADF0FA02DE7D75D008FC3B0 /* TourAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourAudioPlayer.swift; sourceTree = "<group>"; };
 		702BBA562C8125460017C722 /* ARTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTourView.swift; sourceTree = "<group>"; };
 		704D30782C83D0A100B2B7C6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		705456202C99D31700E680C6 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -124,6 +126,20 @@
 		70EFA60A2C72A91500A45190 /* ToursListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListViewModel.swift; sourceTree = "<group>"; };
 		70EFA60F2C72AB8F00A45190 /* ToursListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToursListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4ADF0FB22DE7D9CA008FC3B0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				welcome_polyglot.mp3,
+			);
+			target = 70BB355D2C71510E00120FA6 /* UVGTourTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4ADF0FA22DE7D9B6008FC3B0 /* Audio */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (4ADF0FB22DE7D9CA008FC3B0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Audio; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		70BB35252C713EDB00120FA6 /* Frameworks */ = {
@@ -184,6 +200,7 @@
 		70BB352A2C713EDB00120FA6 /* UVGTour */ = {
 			isa = PBXGroup;
 			children = (
+				4ADF0FA22DE7D9B6008FC3B0 /* Audio */,
 				706004902C7ECD72003AA384 /* Info.plist */,
 				70BDDC1C2C7A4DC100C4E735 /* Application */,
 				70BB353A2C713F6A00120FA6 /* Presentation */,
@@ -304,6 +321,7 @@
 		70BB354E2C71449400120FA6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4ADF0FA02DE7D75D008FC3B0 /* TourAudioPlayer.swift */,
 				70BDDC252C7A568C00C4E735 /* Sizes.swift */,
 			);
 			path = Utils;
@@ -532,6 +550,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				4ADF0FA22DE7D9B6008FC3B0 /* Audio */,
+			);
 			name = UVGTour;
 			packageProductDependencies = (
 			);
@@ -652,6 +673,7 @@
 				70BDDC212C7A523B00C4E735 /* TourScreen.swift in Sources */,
 				70DC53322C7D432100F6A45A /* DistanceIndicatorView.swift in Sources */,
 				706004882C7EAA3F003AA384 /* TourProgressIndicatorView.swift in Sources */,
+				4ADF0FA12DE7D765008FC3B0 /* TourAudioPlayer.swift in Sources */,
 				70EFA5F92C72A0CF00A45190 /* String+Hardcoded.swift in Sources */,
 				70BDDC242C7A541200C4E735 /* TourStopView.swift in Sources */,
 				70BDDC282C7A570900C4E735 /* TourProgressView.swift in Sources */,
@@ -812,7 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVGTour/Preview Content\"";
-				DEVELOPMENT_TEAM = H9XPAYGRWN;
+				DEVELOPMENT_TEAM = Y64T776AM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UVGTour/Info.plist;
@@ -832,7 +854,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gus.UVGTour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Leiva.UVGTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -848,7 +870,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UVGTour/Preview Content\"";
-				DEVELOPMENT_TEAM = H9XPAYGRWN;
+				DEVELOPMENT_TEAM = Y64T776AM8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UVGTour/Info.plist;
@@ -868,7 +890,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gus.UVGTour;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Leiva.UVGTour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

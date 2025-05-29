@@ -29,6 +29,11 @@ struct ToursListScreen: View {
             Button(NSLocalizedString("Start", comment: "")) {
                 tourSelection.selectedTour = selectedTour
                 show = false
+                
+                // Welcome audio player
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    TourAudioPlayer.play(audioNamed: "welcome_polyglot")
+                }
             }
         }
     }
