@@ -110,7 +110,7 @@ struct TourScreen: View {
                         TourAudioPlayer.play(audioNamed: "continue_tour")
                     }
         
-                } else {
+                } else if index == 1{
                     TourAudioPlayer.play(audioNamed: "stop_info")
                 }
 
