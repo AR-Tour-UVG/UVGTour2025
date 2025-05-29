@@ -28,6 +28,9 @@
         }
       }
     },
+    "Bienvenido a UVG Tour" : {
+
+    },
     "distanceMeter" : {
       "comment" : "Distance in meter singular",
       "extractionState" : "manual",
@@ -63,6 +66,9 @@
           }
         }
       }
+    },
+    "Empezar" : {
+
     },
     "finish" : {
       "comment" : "Finish tour",

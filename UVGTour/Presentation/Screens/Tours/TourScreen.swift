@@ -105,6 +105,9 @@ struct TourScreen: View {
             }
             
         })
+        .onAppear {
+            TourAudioPlayer.play(audioNamed: "intro_audio")
+        }
     }
     
 }

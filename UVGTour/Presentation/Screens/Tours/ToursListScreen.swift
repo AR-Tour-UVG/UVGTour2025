@@ -14,6 +14,8 @@ struct ToursListScreen: View {
     @Binding var show: Bool
     @State var showStartTourAlert: Bool = false
     @State var selectedTour: Tour? = nil
+    @State private var hasPlayedWelcomeAudio = false
+    
     
     var body: some View {
         List(viewModel.tours) { tour in
@@ -30,14 +32,15 @@ struct ToursListScreen: View {
                 tourSelection.selectedTour = selectedTour
                 show = false
                 
-                // Welcome audio player
+                // audio player
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                    TourAudioPlayer.play(audioNamed: "welcome_polyglot")
+                    TourAudioPlayer.play(audioNamed: "guide_audio")
                 }
             }
         }
     }
 }
+    
 
 #Preview {
     let datasource = LocalToursDatasource()
